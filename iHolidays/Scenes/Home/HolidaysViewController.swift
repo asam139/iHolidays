@@ -8,8 +8,8 @@
 import UIKit
 import RxSwift
 
-class HomeViewController: UIViewController, BindableType {
-    var viewModel: HomeViewModel!
+class HolidaysViewController: UIViewController, BindableType {
+    var viewModel: HolidaysViewModel!
 
 
     // MARK: Views
@@ -19,15 +19,21 @@ class HomeViewController: UIViewController, BindableType {
     // MARK: Stored properties
 
     private let disposeBag = DisposeBag()
-    private let tableViewCellIdentifier = String(describing: DetailTableViewCell.self)
+    private let tableViewCellIdentifier = String(describing: HolidayTableViewCell.self)
 
     // MARK: Overrides
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(DetailTableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
+        tableView.register(HolidayTableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
         tableView.rowHeight = 44
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.input.action.onNext(.fetch)
     }
 
     // MARK: BindableType

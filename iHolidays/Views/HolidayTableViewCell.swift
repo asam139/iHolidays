@@ -1,5 +1,5 @@
 //
-//  DetailTableViewCell.swift
+//  HolidayTableViewCell.swift
 //  iHolidays
 //
 //  Created by Saúl Moreno Abril on 24/1/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailTableViewCell: UITableViewCell {
+class HolidayTableViewCell: UITableViewCell {
 
     // MARK: Initialization
 

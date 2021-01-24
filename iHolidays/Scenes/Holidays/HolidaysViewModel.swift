@@ -6,10 +6,10 @@
 //
 
 import RxSwift
-import RxRelay
 
-enum HolidaysViewModelAction {
+enum HolidaysViewModelAction: Equatable {
     case fetch
+    case select(holiday: String)
 }
 
 struct HolidaysViewModelInput {

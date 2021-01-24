@@ -7,9 +7,11 @@
 
 import UIKit
 import XCoordinator
+import XCoordinatorRx
 
 enum HolidaysRoute: Route {
     case home
+    case holiday(String)
 }
 
 class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
@@ -30,6 +32,9 @@ class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
             let viewModel = HolidaysViewModelImpl(router: unownedRouter)
             viewController.bind(to: viewModel)
             return .push(viewController)
+        case .holiday(let holiday):
+            let coordinator = HolidayCoordinator(holiday: holiday)
+            return .present(coordinator, animation: .default)
         }
     }
 

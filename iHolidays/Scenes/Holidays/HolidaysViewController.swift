@@ -7,13 +7,13 @@
 
 import UIKit
 import RxSwift
+import Action
 
 class HolidaysViewController: UIViewController, BindableType {
     var viewModel: HolidaysViewModel!
 
 
     // MARK: Views
-
     @IBOutlet private var tableView: UITableView!
 
     // MARK: Stored properties
@@ -39,8 +39,6 @@ class HolidaysViewController: UIViewController, BindableType {
     // MARK: BindableType
 
     func bindViewModel() {
-        //viewModel.input.action.onNext(.viewDidLoad)
-        
         viewModel.output.holidays
             .bind(to: tableView.rx.items(cellIdentifier: tableViewCellIdentifier)) { _, model, cell in
                 cell.textLabel?.text = model
@@ -48,6 +46,11 @@ class HolidaysViewController: UIViewController, BindableType {
 //                cell.imageView?.image = model.image
 //                cell.selectionStyle = .none
             }
+            .disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(String.self)
+            .map { HolidaysViewModelAction.select(holiday: $0) }
+            .bind(to: viewModel.input.action)
             .disposed(by: disposeBag)
     }
 }

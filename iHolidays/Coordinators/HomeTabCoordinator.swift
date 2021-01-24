@@ -7,6 +7,7 @@
 
 import UIKit
 import XCoordinator
+import XCoordinatorRx
 
 enum HomeRoute: Route {
     case holidays

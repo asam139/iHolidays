@@ -41,7 +41,6 @@
 		86ED9B5F25BF3AF2001DE8B0 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B5E25BF3AF2001DE8B0 /* ServicesAssembly.swift */; };
 		86ED9B6425BF3CD0001DE8B0 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B6325BF3CD0001DE8B0 /* RepositoriesAssembly.swift */; };
 		86ED9B6D25BF3D32001DE8B0 /* UseCasesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */; };
-		86ED9B7625BF3DDE001DE8B0 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B7525BF3DDE001DE8B0 /* Injected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +99,6 @@
 		86ED9B5E25BF3AF2001DE8B0 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		86ED9B6325BF3CD0001DE8B0 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
 		86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesAssembly.swift; sourceTree = "<group>"; };
-		86ED9B7525BF3DDE001DE8B0 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,7 +285,6 @@
 			isa = PBXGroup;
 			children = (
 				86ED9B5425BF3972001DE8B0 /* Assembler.swift */,
-				86ED9B7425BF3DB1001DE8B0 /* PropertyWrapper */,
 				86ED9B5225BF38EB001DE8B0 /* Common */,
 				86A696A725BF52350067C25B /* ViewModels */,
 			);
@@ -313,14 +310,6 @@
 				86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		86ED9B7425BF3DB1001DE8B0 /* PropertyWrapper */ = {
-			isa = PBXGroup;
-			children = (
-				86ED9B7525BF3DDE001DE8B0 /* Injected.swift */,
-			);
-			path = PropertyWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,7 +460,6 @@
 				86CFD13B25BDFD51006A53E6 /* HolidaysViewController.swift in Sources */,
 				86ED9B6425BF3CD0001DE8B0 /* RepositoriesAssembly.swift in Sources */,
 				86CFD1BF25BE144B006A53E6 /* HolidaysCoordinator.swift in Sources */,
-				86ED9B7625BF3DDE001DE8B0 /* Injected.swift in Sources */,
 				86CFD1E925BE1AF0006A53E6 /* HolidayViewModalImpl.swift in Sources */,
 				86CFD1D725BE1AAD006A53E6 /* HolidayViewController.swift in Sources */,
 				86CFD1B725BE142C006A53E6 /* HomeTabCoordinator.swift in Sources */,

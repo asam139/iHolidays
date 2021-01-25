@@ -8,9 +8,9 @@
 import Swinject
 
 class HolidaysViewModelAssembly: Assembly {
-  func assemble(container: Container) {
-    container.register(HolidaysViewModel.self) { r, router in
-        HolidaysViewModelImpl(router: router, resolver: r)
+    func assemble(container: Container) {
+        container.register(HolidaysViewModel.self) { r, router in
+            HolidaysViewModelImpl(router: router, resolver: r)
+        }
     }
-  }
 }

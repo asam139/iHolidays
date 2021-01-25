@@ -30,15 +30,22 @@ class HolidayViewController: UIViewController, BindableType {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
+    deinit {
+        print("Deinit")
+    }
 
     // MARK: BindableType
 
     func bindViewModel() {
+        button.rx.action = onDone
         viewModel.output.holiday.bind(to: label.rx.text).disposed(by: disposeBag)
-        
-        button.rx.tap
-            .map { HolidayViewModelAction.done }
-            .bind(to: viewModel.input.action).disposed(by: disposeBag)
-
+    }
+    
+    // MARK: Actions
+    
+    private lazy var onDone = CocoaAction { [unowned self] in
+        self.viewModel.input.dismissTrigger.onNext(())
+        return .empty()
     }
 }

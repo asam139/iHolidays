@@ -7,13 +7,8 @@
 
 import RxSwift
 
-enum HolidayViewModelAction {
-    case viewWillAppear
-    case done
-}
-
 struct HolidayViewModelInput {
-    var action: AnyObserver<HolidayViewModelAction>
+    var dismissTrigger: AnyObserver<Void>
 }
 
 struct HolidayViewModelOutput {

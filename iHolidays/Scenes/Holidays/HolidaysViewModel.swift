@@ -7,13 +7,9 @@
 
 import RxSwift
 
-enum HolidaysViewModelAction: Equatable {
-    case fetch
-    case select(holiday: String)
-}
-
 struct HolidaysViewModelInput {
-    var action: AnyObserver<HolidaysViewModelAction>
+    var fetchHolidaysTrigger: AnyObserver<Void>
+    var selectHoliday: AnyObserver<String>
 }
 
 struct HolidaysViewModelOutput {

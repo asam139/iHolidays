@@ -16,15 +16,12 @@ class HolidayViewModelImpl: HolidayViewModel {
     let disposeBag = DisposeBag()
 
     // MARK: Inputs
-    private lazy var action = PublishSubject<HolidayViewModelAction>()
-    
-    private lazy var route = Action<HolidayRoute, Void> { [router] in
-        router.rx.trigger($0)
-    }
-    
+    private lazy var dismissTrigger = PublishSubject<Void>()
+        
     lazy var input: HolidayViewModelInput = {
-        let input = HolidayViewModelInput(action: action.asObserver())
-        return input
+        HolidayViewModelInput(
+            dismissTrigger: dismissTrigger.asObserver()
+        )
     }()
     
     // MARK: Outputs
@@ -34,10 +31,16 @@ class HolidayViewModelImpl: HolidayViewModel {
         transformInput()
     }()
     
+    // MARK: Actions
+    
+    private lazy var route = Action<HolidayRoute, Void> { [router] in
+        router.rx.trigger($0)
+    }
+    
     // MARK: Transform
     func transformInput() -> HolidayViewModelOutput {
         
-        action.filter { $0 == .done }
+        dismissTrigger
             .map { _ in HolidayRoute.holidays }
             .bind(to: route.inputs)
             .disposed(by: disposeBag)

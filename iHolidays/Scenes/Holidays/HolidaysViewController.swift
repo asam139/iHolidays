@@ -32,13 +32,20 @@ class HolidaysViewController: UIViewController, BindableType {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        viewModel.input.action.onNext(.fetch)
+        fetch.execute()
+    }
+    
+    deinit {
+        print("Deinit")
     }
 
     // MARK: BindableType
 
     func bindViewModel() {
+        tableView.rx.modelSelected(String.self)
+            .bind(to: viewModel.input.selectHoliday)
+            .disposed(by: disposeBag)
+        
         viewModel.output.holidays
             .bind(to: tableView.rx.items(cellIdentifier: tableViewCellIdentifier)) { _, model, cell in
                 cell.textLabel?.text = model
@@ -47,11 +54,14 @@ class HolidaysViewController: UIViewController, BindableType {
 //                cell.selectionStyle = .none
             }
             .disposed(by: disposeBag)
-        
-        tableView.rx.modelSelected(String.self)
-            .map { HolidaysViewModelAction.select(holiday: $0) }
-            .bind(to: viewModel.input.action)
-            .disposed(by: disposeBag)
     }
+    
+    // MARK: Actions
+    
+    lazy var fetch = CocoaAction { [unowned self] in
+        self.viewModel.input.fetchHolidaysTrigger.onNext(())
+        return .empty()
+    }
+
 }
 

@@ -5,8 +5,6 @@
 //  Created by Saúl Moreno Abril on 25/1/21.
 //
 
-import Foundation
-
 import Swinject
 
 extension Assembler {
@@ -16,7 +14,10 @@ extension Assembler {
             CommonAssembly(),
             ServicesAssembly(),
             RepositoriesAssembly(),
-            UseCasesAssembly()
+            UseCasesAssembly(),
+            
+            HolidaysViewModelAssembly(),
+            HolidayViewModelAssembly()
         ], container: container)
         return assembler
     }()

@@ -11,8 +11,8 @@ import Swinject
 @propertyWrapper
 struct Injected<Value> {
 
-    init(resolver: Resolver = Assembler.shared.resolver) {
-        self.wrappedValue = resolver.resolve(Value.self)!
+    init(assembler: Assembler = Assembler.shared) {
+        self.wrappedValue = assembler.resolver.resolve(Value.self)!
     }
 
     var wrappedValue: Value

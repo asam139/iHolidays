@@ -8,6 +8,7 @@
 import UIKit
 import XCoordinator
 import XCoordinatorRx
+import Swinject
 
 enum HomeRoute: Route {
     case holidays
@@ -22,8 +23,8 @@ class HomeTabCoordinator: TabBarCoordinator<HomeRoute> {
 
     // MARK: Initialization
 
-    convenience init() {
-        let holidaysCoordinator = HolidaysCoordinator(rootViewController: .init())
+    convenience init(assembler: Assembler = Assembler.shared) {
+        let holidaysCoordinator = HolidaysCoordinator(rootViewController: .init(), assembler: assembler)
         holidaysCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
 
         self.init(holidaysRouter: holidaysCoordinator.strongRouter)

@@ -7,7 +7,7 @@
 
 import UIKit
 import XCoordinator
-import XCoordinatorRx
+import Swinject
 
 enum HolidayRoute: Route {
     case home(String)
@@ -15,9 +15,12 @@ enum HolidayRoute: Route {
 }
 
 class HolidayCoordinator: NavigationCoordinator<HolidayRoute> {
+    
+    private let assembler: Assembler
 
     // MARK: Initialization
-    init(rootViewController: UINavigationController, holiday: String) {
+    init(rootViewController: UINavigationController, holiday: String, assembler: Assembler) {
+        self.assembler = assembler
         super.init(rootViewController: rootViewController, initialRoute: nil)
         trigger(.home(holiday))
     }
@@ -28,7 +31,7 @@ class HolidayCoordinator: NavigationCoordinator<HolidayRoute> {
         switch route {
         case let .home(holiday):
             let viewController = HolidayViewController(nibName: "HolidayViewController", bundle: nil)
-            let viewModel = HolidayViewModelImpl(router: unownedRouter, holiday: holiday)
+            let viewModel = assembler.resolver.resolve(HolidayViewModel.self, arguments: unownedRouter, holiday)!
             viewController.bind(to: viewModel)
             return .push(viewController)
         case .holidays:

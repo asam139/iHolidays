@@ -10,12 +10,10 @@ import RxSwift
 import Action
 import XCoordinator
 import iHolidaysDomain
+import Swinject
 
 class HolidaysViewModelImpl: HolidaysViewModel {
     let disposeBag = DisposeBag()
-    
-    // MARK: Injected
-    @Injected var userUseCase: UserUseCase
 
     // MARK: Inputs
     private lazy var fetchHolidays = PublishSubject<Void>()
@@ -54,11 +52,12 @@ class HolidaysViewModelImpl: HolidaysViewModel {
     // MARK: Stored properties
 
     private let router: UnownedRouter<HolidaysRoute>
+    private let userUseCase: UserUseCase
 
     // MARK: Initialization
 
-    init(router: UnownedRouter<HolidaysRoute>) {
+    init(router: UnownedRouter<HolidaysRoute>, resolver: Resolver) {
         self.router = router
+        self.userUseCase = resolver.resolve(UserUseCase.self)!
     }
-
 }

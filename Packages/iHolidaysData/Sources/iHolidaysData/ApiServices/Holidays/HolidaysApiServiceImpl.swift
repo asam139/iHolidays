@@ -12,13 +12,19 @@ import RxMoya
 
 public class HolidaysApiServiceImpl: MoyaProvider<HolidaysApi>, HolidaysApiService {
     let baseURL: URL
+    let apiKey: String
     
-    public init(baseURL: URL) {
+    public init(baseURL: URL, apiKey: String) {
         self.baseURL = baseURL
+        self.apiKey = apiKey
     }
     
-    func getHolidays() -> Single<[HolidayDTO]> {
-        rx.request(.init(baseURL: baseURL, route: .getHolidays))
+    private func getTargetType(_ route: HolidaysApi.Target) -> HolidaysApi {
+        .init(baseURL: baseURL, apiKey: apiKey, route: route)
+    }
+    
+    func getHolidays(country: String, year: UInt) -> Single<[HolidayDTO]> {
+        rx.request(getTargetType(.getHolidays(country: country, year: year)))
             .map(HolidayResponseDTO.self)
             .map { $0.holidays ?? [] }
     }

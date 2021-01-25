@@ -16,8 +16,8 @@ class HolidaysRepositoryImpl: HolidaysRepository {
         self.service = service
     }
     
-    func getHolidays() -> Single<[Holiday]> {
-        service.getHolidays().map {
+    func getHolidays(country: String, year: UInt) -> Single<[Holiday]> {
+        service.getHolidays(country: country, year: year).map {
             $0.map { h in h.toDomain() }
         }
     }

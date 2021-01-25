@@ -14,7 +14,7 @@ public class UserUseCaseImpl: UserUseCase {
         self.repository = repository
     }
     
-    public func getHolidays() -> Single<[Holiday]> {
-        repository.getHolidays()
+    public func getHolidays(country: String, year: UInt) -> Single<[Holiday]> {
+        repository.getHolidays(country: country, year: year)
     }
 }

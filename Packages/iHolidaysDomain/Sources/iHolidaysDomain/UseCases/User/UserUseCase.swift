@@ -8,6 +8,6 @@
 import RxSwift
 
 public protocol UserUseCase {
-    func getHolidays() -> Single<[Holiday]>
+    func getHolidays(country: String, year: UInt) -> Single<[Holiday]>
 }
 

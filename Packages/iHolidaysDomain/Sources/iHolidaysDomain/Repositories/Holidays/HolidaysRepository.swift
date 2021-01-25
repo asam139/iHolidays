@@ -9,6 +9,6 @@ import RxSwift
 import Moya
 
 public protocol HolidaysRepository {
-    func getHolidays() -> Single<[Holiday]>
+    func getHolidays(country: String, year: UInt) -> Single<[Holiday]>
 }
 

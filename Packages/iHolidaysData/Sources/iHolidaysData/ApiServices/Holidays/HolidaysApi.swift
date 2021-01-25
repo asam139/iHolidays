@@ -10,10 +10,11 @@ import Moya
 
 public struct HolidaysApi: TargetType {
     public let baseURL: URL
+    public let apiKey: String
     public let route: Target
 
     public enum Target {
-        case getHolidays
+        case getHolidays(country: String, year: UInt)
     }
     
     public var path: String {
@@ -32,9 +33,11 @@ public struct HolidaysApi: TargetType {
     
     public var task: Task {
         switch route {
-        case .getHolidays:
-            return .requestPlain
+        case .getHolidays(let country, let year):
+            let parameters = ["country": country, "year": String(year)]
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
+
     }
     
     public var sampleData: Data {

@@ -17,7 +17,9 @@ public class HolidaysApiServiceImpl: MoyaProvider<HolidaysApi>, HolidaysApiServi
         self.baseURL = baseURL
     }
     
-    func getHolidays() -> Single<HolidayDTO> {
-        rx.request(.init(baseURL: baseURL, route: .getHolidays)).map(HolidayDTO.self)
+    func getHolidays() -> Single<[HolidayDTO]> {
+        rx.request(.init(baseURL: baseURL, route: .getHolidays))
+            .map(HolidayResponseDTO.self)
+            .map { $0.holidays ?? [] }
     }
 }

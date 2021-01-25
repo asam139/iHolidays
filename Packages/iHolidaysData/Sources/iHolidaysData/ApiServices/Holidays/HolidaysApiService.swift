@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol HolidaysApiService {
-    func getHolidays() -> Single<HolidayDTO>
+    func getHolidays() -> Single<[HolidayDTO]>
 }

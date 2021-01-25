@@ -9,14 +9,14 @@ import RxSwift
 import Moya
 import iHolidaysDomain
 
-class HolidaysRepositoryImpl: HolidaysRepository {
+public class HolidaysRepositoryImpl: HolidaysRepository {
     private let service: HolidaysApiService
     
-    init(service: HolidaysApiService) {
+    public init(service: HolidaysApiService) {
         self.service = service
     }
     
-    func getHolidays(country: String, year: UInt) -> Single<[Holiday]> {
+    public func getHolidays(country: String, year: UInt) -> Single<[Holiday]> {
         service.getHolidays(country: country, year: year).map {
             $0.map { h in h.toDomain() }
         }

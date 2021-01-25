@@ -7,6 +7,6 @@
 
 import RxSwift
 
-protocol HolidaysApiService {
+public protocol HolidaysApiService {
     func getHolidays(country: String, year: UInt) -> Single<[HolidayDTO]>
 }

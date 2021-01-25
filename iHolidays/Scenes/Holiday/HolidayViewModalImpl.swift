@@ -9,7 +9,6 @@ import Foundation
 import RxSwift
 import Action
 import XCoordinator
-import XCoordinatorRx
 
 class HolidayViewModelImpl: HolidayViewModel {
     

@@ -6,14 +6,15 @@
 //
 
 import RxSwift
+import iHolidaysDomain
 
 struct HolidaysViewModelInput {
     var fetchHolidaysTrigger: AnyObserver<Void>
-    var selectHoliday: AnyObserver<String>
+    var selectHoliday: AnyObserver<Holiday>
 }
 
 struct HolidaysViewModelOutput {
-    let holidays: Observable<[String]>
+    let holidays: Observable<[Holiday]>
 }
 
 protocol HolidaysViewModel {

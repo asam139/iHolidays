@@ -26,8 +26,12 @@ public class HolidaysApiServiceImpl: HolidaysApiService {
     }
     
     public func getHolidays(country: String, year: UInt) -> Single<[HolidayDTO]> {
-        provider.rx.request(getTargetType(.getHolidays(country: country, year: year)))
-            .map(HolidayResponseDTO.self)
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.yearMonthDay)
+        //decoder.dateDecodingStrategy = .iso8601 // Error
+        
+        return provider.rx.request(getTargetType(.getHolidays(country: country, year: year)))
+            .map(HolidayResponseDTO.self, using: decoder)
             .map { $0.holidays ?? [] }
     }
 }

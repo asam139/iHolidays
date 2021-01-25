@@ -35,6 +35,12 @@
 		86ED9B0825BF1100001DE8B0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 86ED9B0725BF1100001DE8B0 /* Swinject */; };
 		86ED9B1425BF1115001DE8B0 /* Container+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B1325BF1115001DE8B0 /* Container+.swift */; };
 		86ED9B3D25BF13F4001DE8B0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B3C25BF13F4001DE8B0 /* Config.swift */; };
+		86ED9B5525BF3972001DE8B0 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B5425BF3972001DE8B0 /* Assembler.swift */; };
+		86ED9B5A25BF3A54001DE8B0 /* CommonAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B5925BF3A54001DE8B0 /* CommonAssembly.swift */; };
+		86ED9B5F25BF3AF2001DE8B0 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B5E25BF3AF2001DE8B0 /* ServicesAssembly.swift */; };
+		86ED9B6425BF3CD0001DE8B0 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B6325BF3CD0001DE8B0 /* RepositoriesAssembly.swift */; };
+		86ED9B6D25BF3D32001DE8B0 /* UseCasesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */; };
+		86ED9B7625BF3DDE001DE8B0 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B7525BF3DDE001DE8B0 /* Injected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +93,12 @@
 		86ED9B1C25BF131A001DE8B0 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		86ED9B1D25BF1324001DE8B0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		86ED9B3C25BF13F4001DE8B0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		86ED9B5425BF3972001DE8B0 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		86ED9B5925BF3A54001DE8B0 /* CommonAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAssembly.swift; sourceTree = "<group>"; };
+		86ED9B5E25BF3AF2001DE8B0 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		86ED9B6325BF3CD0001DE8B0 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
+		86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesAssembly.swift; sourceTree = "<group>"; };
+		86ED9B7525BF3DDE001DE8B0 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +275,8 @@
 		86ED9B0925BF1102001DE8B0 /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				86ED9B7425BF3DB1001DE8B0 /* PropertyWrapper */,
+				86ED9B5225BF38EB001DE8B0 /* Common */,
 				86ED9B1325BF1115001DE8B0 /* Container+.swift */,
 			);
 			path = DI;
@@ -276,6 +290,26 @@
 				86ED9B3C25BF13F4001DE8B0 /* Config.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		86ED9B5225BF38EB001DE8B0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				86ED9B5425BF3972001DE8B0 /* Assembler.swift */,
+				86ED9B5925BF3A54001DE8B0 /* CommonAssembly.swift */,
+				86ED9B5E25BF3AF2001DE8B0 /* ServicesAssembly.swift */,
+				86ED9B6325BF3CD0001DE8B0 /* RepositoriesAssembly.swift */,
+				86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		86ED9B7425BF3DB1001DE8B0 /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				86ED9B7525BF3DDE001DE8B0 /* Injected.swift */,
+			);
+			path = PropertyWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,7 +458,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				86CFD13B25BDFD51006A53E6 /* HolidaysViewController.swift in Sources */,
+				86ED9B6425BF3CD0001DE8B0 /* RepositoriesAssembly.swift in Sources */,
 				86CFD1BF25BE144B006A53E6 /* HolidaysCoordinator.swift in Sources */,
+				86ED9B7625BF3DDE001DE8B0 /* Injected.swift in Sources */,
 				86CFD1E925BE1AF0006A53E6 /* HolidayViewModalImpl.swift in Sources */,
 				86CFD1D725BE1AAD006A53E6 /* HolidayViewController.swift in Sources */,
 				86CFD1B725BE142C006A53E6 /* HomeTabCoordinator.swift in Sources */,
@@ -433,11 +469,15 @@
 				86CFD1A025BE11C0006A53E6 /* HolidayTableViewCell.swift in Sources */,
 				86CFD13925BDFD51006A53E6 /* SceneDelegate.swift in Sources */,
 				86CFD1E425BE1AE8006A53E6 /* HolidayViewModal.swift in Sources */,
+				86ED9B6D25BF3D32001DE8B0 /* UseCasesAssembly.swift in Sources */,
 				86CFD19425BE0D58006A53E6 /* BindableType.swift in Sources */,
 				86CFD17A25BDFE47006A53E6 /* HolidaysViewModelImpl.swift in Sources */,
+				86ED9B5525BF3972001DE8B0 /* Assembler.swift in Sources */,
 				86CFD1EE25BE1E81006A53E6 /* HolidayCoordinator.swift in Sources */,
 				86ED9B3D25BF13F4001DE8B0 /* Config.swift in Sources */,
+				86ED9B5F25BF3AF2001DE8B0 /* ServicesAssembly.swift in Sources */,
 				86CFD17525BDFE23006A53E6 /* HolidaysViewModel.swift in Sources */,
+				86ED9B5A25BF3A54001DE8B0 /* CommonAssembly.swift in Sources */,
 				868333BB25BED05200F26976 /* Transitions+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,11 @@ extension Container {
         let container = Container()
         
         container.register(HolidaysApiService.self) { r in
-            HolidaysApiServiceImpl(baseURL: URL(string: "")!, apiKey: "", provider: .init(stubClosure: MoyaProvider.delayedStub(0.1)))
+            HolidaysApiServiceImpl(
+                baseURL: Config.holidaysApiBaseURL,
+                apiKey: Config.holidaysApiKey,
+                provider: .init(stubClosure: MoyaProvider.delayedStub(0.1))
+            )
         }
         
         container.register(HolidaysRepository.self) { r in

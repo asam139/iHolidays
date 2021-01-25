@@ -8,10 +8,10 @@
 import UIKit
 import RxSwift
 import Action
+import iHolidaysDomain
 
 class HolidaysViewController: UIViewController, BindableType {
     var viewModel: HolidaysViewModel!
-
 
     // MARK: Views
     @IBOutlet private var tableView: UITableView!
@@ -42,13 +42,15 @@ class HolidaysViewController: UIViewController, BindableType {
     // MARK: BindableType
 
     func bindViewModel() {
-        tableView.rx.modelSelected(String.self)
-            .bind(to: viewModel.input.selectHoliday)
+        tableView.rx.modelSelected(Holiday.self)
+            .asDriver()
+            .drive(viewModel.input.selectHoliday)
             .disposed(by: disposeBag)
         
         viewModel.output.holidays
-            .bind(to: tableView.rx.items(cellIdentifier: tableViewCellIdentifier)) { _, model, cell in
-                cell.textLabel?.text = model
+            .asDriver(onErrorJustReturn: [])
+            .drive(tableView.rx.items(cellIdentifier: tableViewCellIdentifier)) { _, model, cell in
+                cell.textLabel?.text = model.name
 //                cell.detailTextLabel?.text = model.subtitle
 //                cell.imageView?.image = model.image
 //                cell.selectionStyle = .none

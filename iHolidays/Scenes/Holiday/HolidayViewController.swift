@@ -39,7 +39,9 @@ class HolidayViewController: UIViewController, BindableType {
 
     func bindViewModel() {
         button.rx.action = onDone
-        viewModel.output.holiday.bind(to: label.rx.text).disposed(by: disposeBag)
+        viewModel.output.holiday
+            .asDriver(onErrorJustReturn: "")
+            .drive(label.rx.text).disposed(by: disposeBag)
     }
     
     // MARK: Actions

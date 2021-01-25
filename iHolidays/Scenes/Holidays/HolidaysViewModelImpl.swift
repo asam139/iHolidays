@@ -9,10 +9,13 @@ import Foundation
 import RxSwift
 import Action
 import XCoordinator
-import XCoordinatorRx
+import iHolidaysDomain
 
 class HolidaysViewModelImpl: HolidaysViewModel {
     let disposeBag = DisposeBag()
+    
+    // MARK: Injected
+    @Injected var userUseCase: UserUseCase
 
     // MARK: Inputs
     private lazy var fetchHolidays = PublishSubject<Void>()
@@ -26,12 +29,12 @@ class HolidaysViewModelImpl: HolidaysViewModel {
     
     // MARK: Actions
     
-    lazy var selectHolidayAction = Action<String, Void> { [unowned self] holiday in
-        self.router.rx.trigger(.holiday(holiday))
+    lazy var selectHolidayAction = Action<Holiday, Void> { [unowned self] holiday in
+        self.router.rx.trigger(.holiday(holiday.name))
     }
     
     // MARK: Outputs
-    private lazy var holidaysSub = PublishSubject<[String]>()
+    private lazy var holidaysSub = PublishSubject<[Holiday]>()
     
     lazy var output: HolidaysViewModelOutput = {
         transformInput()
@@ -41,11 +44,10 @@ class HolidaysViewModelImpl: HolidaysViewModel {
     func transformInput() -> HolidaysViewModelOutput {
         
         fetchHolidays
-            .map { _ in ["1", "2", "3"]}
+            .flatMap { [userUseCase] in userUseCase.getHolidays(country: "ES", year: 2020) }
             .bind(to: holidaysSub)
             .disposed(by: disposeBag)
 
-        
         return HolidaysViewModelOutput(holidays: holidaysSub.asObservable())
     }
 

@@ -33,8 +33,10 @@ class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
             viewController.bind(to: viewModel)
             return .push(viewController)
         case .holiday(let holiday):
-            let coordinator = HolidayCoordinator(holiday: holiday)
-            return .present(coordinator, animation: .default)
+            let coordinator = HolidayCoordinator(rootViewController: rootViewController, holiday: holiday)
+            addChild(coordinator)
+            return .none()
+            //return .present(coordinator, animation: .default)
         }
     }
 

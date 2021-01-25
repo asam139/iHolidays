@@ -7,15 +7,20 @@
 
 import Foundation
 import RxSwift
+import Action
 import XCoordinator
 import XCoordinatorRx
 
-class HolidayViewModelImpl: HolidayViewModel, TransformableType {
+class HolidayViewModelImpl: HolidayViewModel {
     
     let disposeBag = DisposeBag()
 
     // MARK: Inputs
     private lazy var action = PublishSubject<HolidayViewModelAction>()
+    
+    private lazy var route = Action<HolidayRoute, Void> { [router] in
+        router.rx.trigger($0)
+    }
     
     lazy var input: HolidayViewModelInput = {
         let input = HolidayViewModelInput(action: action.asObserver())
@@ -26,11 +31,17 @@ class HolidayViewModelImpl: HolidayViewModel, TransformableType {
     private var holiday: Observable<String>
     
     lazy var output: HolidayViewModelOutput = {
-        transform(input: input)
+        transformInput()
     }()
     
     // MARK: Transform
-    func transform(input: HolidayViewModelInput) -> HolidayViewModelOutput {
+    func transformInput() -> HolidayViewModelOutput {
+        
+        action.filter { $0 == .done }
+            .map { _ in HolidayRoute.holidays }
+            .bind(to: route.inputs)
+            .disposed(by: disposeBag)
+        
         return HolidayViewModelOutput(holiday: holiday)
     }
 

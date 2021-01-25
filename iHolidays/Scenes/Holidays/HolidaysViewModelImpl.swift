@@ -11,7 +11,7 @@ import Action
 import XCoordinator
 import XCoordinatorRx
 
-class HolidaysViewModelImpl: HolidaysViewModel, TransformableType {
+class HolidaysViewModelImpl: HolidaysViewModel {
     let disposeBag = DisposeBag()
 
     // MARK: Inputs
@@ -30,11 +30,11 @@ class HolidaysViewModelImpl: HolidaysViewModel, TransformableType {
     private lazy var holidaysSub = PublishSubject<[String]>()
     
     lazy var output: HolidaysViewModelOutput = {
-        transform(input: input)
+        transformInput()
     }()
     
     // MARK: Transform
-    func transform(input: HolidaysViewModelInput) -> HolidaysViewModelOutput {
+    func transformInput() -> HolidaysViewModelOutput {
         
         action.filter { $0 == .fetch }
             .map { _ in ["1", "2", "3"]}

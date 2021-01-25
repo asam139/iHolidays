@@ -14,6 +14,7 @@ class HolidayViewController: UIViewController, BindableType {
 
     // MARK: Views
     @IBOutlet private var label: UILabel!
+    @IBOutlet private var button: UIButton!
 
     // MARK: Stored properties
 
@@ -33,9 +34,11 @@ class HolidayViewController: UIViewController, BindableType {
     // MARK: BindableType
 
     func bindViewModel() {
-        //viewModel.input.action.onNext(.viewDidLoad)
-        
         viewModel.output.holiday.bind(to: label.rx.text).disposed(by: disposeBag)
+        
+        button.rx.tap
+            .map { HolidayViewModelAction.done }
+            .bind(to: viewModel.input.action).disposed(by: disposeBag)
 
     }
 }

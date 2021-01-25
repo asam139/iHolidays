@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		868333BB25BED05200F26976 /* Transitions+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868333BA25BED05200F26976 /* Transitions+.swift */; };
 		86CFD13725BDFD51006A53E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13625BDFD51006A53E6 /* AppDelegate.swift */; };
 		86CFD13925BDFD51006A53E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13825BDFD51006A53E6 /* SceneDelegate.swift */; };
 		86CFD13B25BDFD51006A53E6 /* HolidaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13A25BDFD51006A53E6 /* HolidaysViewController.swift */; };
@@ -19,7 +20,6 @@
 		86CFD17A25BDFE47006A53E6 /* HolidaysViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD17925BDFE47006A53E6 /* HolidaysViewModelImpl.swift */; };
 		86CFD18025BE0008006A53E6 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 86CFD17F25BE0008006A53E6 /* RxMoya */; };
 		86CFD18625BE0160006A53E6 /* Action in Frameworks */ = {isa = PBXBuildFile; productRef = 86CFD18525BE0160006A53E6 /* Action */; };
-		86CFD18C25BE0288006A53E6 /* TransformableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD18B25BE0288006A53E6 /* TransformableType.swift */; };
 		86CFD19425BE0D58006A53E6 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD19325BE0D58006A53E6 /* BindableType.swift */; };
 		86CFD1A025BE11C0006A53E6 /* HolidayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD19F25BE11C0006A53E6 /* HolidayTableViewCell.swift */; };
 		86CFD1A825BE121B006A53E6 /* HolidaysViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86CFD1A725BE121B006A53E6 /* HolidaysViewController.xib */; };
@@ -50,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		868333BA25BED05200F26976 /* Transitions+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transitions+.swift"; sourceTree = "<group>"; };
 		86CFD13325BDFD51006A53E6 /* iHolidays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHolidays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86CFD13625BDFD51006A53E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86CFD13825BDFD51006A53E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		86CFD15A25BDFD55006A53E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86CFD17425BDFE23006A53E6 /* HolidaysViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysViewModel.swift; sourceTree = "<group>"; };
 		86CFD17925BDFE47006A53E6 /* HolidaysViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysViewModelImpl.swift; sourceTree = "<group>"; };
-		86CFD18B25BE0288006A53E6 /* TransformableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformableType.swift; sourceTree = "<group>"; };
 		86CFD19325BE0D58006A53E6 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		86CFD19F25BE11C0006A53E6 /* HolidayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayTableViewCell.swift; sourceTree = "<group>"; };
 		86CFD1A725BE121B006A53E6 /* HolidaysViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HolidaysViewController.xib; sourceTree = "<group>"; };
@@ -106,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		868333B925BED04300F26976 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				868333BA25BED05200F26976 /* Transitions+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		86CFD12A25BDFD51006A53E6 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +143,7 @@
 				86CFD1B525BE140C006A53E6 /* Coordinators */,
 				86CFD16F25BDFDC4006A53E6 /* Scenes */,
 				86CFD19E25BE11B0006A53E6 /* Views */,
+				868333B925BED04300F26976 /* Extensions */,
 				86CFD13F25BDFD54006A53E6 /* Assets.xcassets */,
 				86CFD14125BDFD54006A53E6 /* LaunchScreen.storyboard */,
 				86CFD14425BDFD54006A53E6 /* Info.plist */,
@@ -183,7 +192,6 @@
 		86CFD18A25BE027E006A53E6 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				86CFD18B25BE0288006A53E6 /* TransformableType.swift */,
 				86CFD19325BE0D58006A53E6 /* BindableType.swift */,
 			);
 			path = MVVM;
@@ -371,8 +379,8 @@
 				86CFD19425BE0D58006A53E6 /* BindableType.swift in Sources */,
 				86CFD17A25BDFE47006A53E6 /* HolidaysViewModelImpl.swift in Sources */,
 				86CFD1EE25BE1E81006A53E6 /* HolidayCoordinator.swift in Sources */,
-				86CFD18C25BE0288006A53E6 /* TransformableType.swift in Sources */,
 				86CFD17525BDFE23006A53E6 /* HolidaysViewModel.swift in Sources */,
+				868333BB25BED05200F26976 /* Transitions+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

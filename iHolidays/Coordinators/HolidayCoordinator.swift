@@ -10,29 +10,29 @@ import XCoordinator
 import XCoordinatorRx
 
 enum HolidayRoute: Route {
-    case holiday(String)
+    case home(String)
     case holidays
 }
 
 class HolidayCoordinator: NavigationCoordinator<HolidayRoute> {
 
     // MARK: Initialization
-
-    init(holiday: String) {
-        super.init(initialRoute: .holiday(holiday))
+    init(rootViewController: UINavigationController, holiday: String) {
+        super.init(rootViewController: rootViewController, initialRoute: nil)
+        trigger(.home(holiday))
     }
 
     // MARK: Overrides
 
     override func prepareTransition(for route: HolidayRoute) -> NavigationTransition {
         switch route {
-        case let .holiday(holiday):
+        case let .home(holiday):
             let viewController = HolidayViewController(nibName: "HolidayViewController", bundle: nil)
             let viewModel = HolidayViewModelImpl(router: unownedRouter, holiday: holiday)
             viewController.bind(to: viewModel)
             return .push(viewController)
         case .holidays:
-            return .dismiss()
+            return .pop()
         }
     }
 }

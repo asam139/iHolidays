@@ -9,6 +9,7 @@ import RxSwift
 
 enum HolidayViewModelAction {
     case viewWillAppear
+    case done
 }
 
 struct HolidayViewModelInput {

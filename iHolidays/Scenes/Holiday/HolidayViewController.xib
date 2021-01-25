@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HolidayViewController" customModule="iHolidays" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="Bgu-dJ-uJy" id="ETC-e5-oVe"/>
                 <outlet property="label" destination="0T9-HY-X7y" id="vso-2b-jG1"/>
                 <outlet property="view" destination="iN0-l3-epB" id="vvK-Rr-YBv"/>
             </connections>
@@ -25,12 +26,18 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgu-dJ-uJy">
+                    <rect key="frame" x="188.5" y="493.5" width="37" height="30"/>
+                    <state key="normal" title="Done"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="0T9-HY-X7y" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Om7-RV-kUz"/>
                 <constraint firstItem="0T9-HY-X7y" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Ues-nM-j7q"/>
+                <constraint firstItem="Bgu-dJ-uJy" firstAttribute="top" secondItem="0T9-HY-X7y" secondAttribute="bottom" constant="30" id="dnb-yi-J6v"/>
+                <constraint firstItem="Bgu-dJ-uJy" firstAttribute="centerX" secondItem="0T9-HY-X7y" secondAttribute="centerX" id="lvZ-Yf-KL0"/>
             </constraints>
             <point key="canvasLocation" x="-145" y="95"/>
         </view>

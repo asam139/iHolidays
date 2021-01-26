@@ -1,0 +1,551 @@
+{
+    "status": 200,
+    "warning": "These results do not include state and province holidays. For more information, please visit https:\/\/holidayapi.com\/docs",
+    "requests": {
+        "used": 4,
+        "available": 9996,
+        "resets": "2021-02-01 00:00:00"
+    },
+    "holidays": [
+        {
+            "name": "New Year's Day",
+            "date": "2020-01-01",
+            "observed": "2020-01-01",
+            "public": true,
+            "country": "ES",
+            "uuid": "c425b20b-749e-426a-bf67-3bb2ff996456",
+            "weekday": {
+                "date": {
+                    "name": "Wednesday",
+                    "numeric": "3"
+                },
+                "observed": {
+                    "name": "Wednesday",
+                    "numeric": "3"
+                }
+            }
+        },
+        {
+            "name": "Epiphany",
+            "date": "2020-01-06",
+            "observed": "2020-01-06",
+            "public": true,
+            "country": "ES",
+            "uuid": "cfd84af7-b6ed-4a40-b02b-361985af9e3b",
+            "weekday": {
+                "date": {
+                    "name": "Monday",
+                    "numeric": "1"
+                },
+                "observed": {
+                    "name": "Monday",
+                    "numeric": "1"
+                }
+            }
+        },
+        {
+            "name": "Valentine's Day",
+            "date": "2020-02-14",
+            "observed": "2020-02-14",
+            "public": false,
+            "country": "ES",
+            "uuid": "ed8dc1e0-370f-4030-aff2-61d8e5bc5d8b",
+            "weekday": {
+                "date": {
+                    "name": "Friday",
+                    "numeric": "5"
+                },
+                "observed": {
+                    "name": "Friday",
+                    "numeric": "5"
+                }
+            }
+        },
+        {
+            "name": "Ash Wednesday",
+            "date": "2020-02-26",
+            "observed": "2020-02-26",
+            "public": false,
+            "country": "ES",
+            "uuid": "359b57cc-1362-4e82-8b96-a57d33a3f513",
+            "weekday": {
+                "date": {
+                    "name": "Wednesday",
+                    "numeric": "3"
+                },
+                "observed": {
+                    "name": "Wednesday",
+                    "numeric": "3"
+                }
+            }
+        },
+        {
+            "name": "World Wildlife Day",
+            "date": "2020-03-03",
+            "observed": "2020-03-03",
+            "public": false,
+            "country": "ES",
+            "uuid": "95ca9650-a7c3-4cbc-b363-de7874ec3da5",
+            "weekday": {
+                "date": {
+                    "name": "Tuesday",
+                    "numeric": "2"
+                },
+                "observed": {
+                    "name": "Tuesday",
+                    "numeric": "2"
+                }
+            }
+        },
+        {
+            "name": "Father's Day",
+            "date": "2020-03-19",
+            "observed": "2020-03-19",
+            "public": false,
+            "country": "ES",
+            "uuid": "e66882e5-c3ef-4a09-96f3-df6bec7e3009",
+            "weekday": {
+                "date": {
+                    "name": "Thursday",
+                    "numeric": "4"
+                },
+                "observed": {
+                    "name": "Thursday",
+                    "numeric": "4"
+                }
+            }
+        },
+        {
+            "name": "March Equinox",
+            "date": "2020-03-20",
+            "observed": "2020-03-20",
+            "public": false,
+            "country": "ES",
+            "uuid": "7248739e-c954-487d-9d8e-87519e162d81",
+            "weekday": {
+                "date": {
+                    "name": "Friday",
+                    "numeric": "5"
+                },
+                "observed": {
+                    "name": "Friday",
+                    "numeric": "5"
+                }
+            }
+        },
+        {
+            "name": "Start of Daylight Saving Time",
+            "date": "2020-03-29",
+            "observed": "2020-03-29",
+            "public": false,
+            "country": "ES",
+            "uuid": "ed6e769e-b27f-4ad8-ac77-b5b3aac4691c",
+            "weekday": {
+                "date": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                },
+                "observed": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                }
+            }
+        },
+        {
+            "name": "Palm Sunday",
+            "date": "2020-04-05",
+            "observed": "2020-04-05",
+            "public": false,
+            "country": "ES",
+            "uuid": "3cae39ee-7573-45b6-9068-ea8c14fce1e5",
+            "weekday": {
+                "date": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                },
+                "observed": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                }
+            }
+        },
+        {
+            "name": "Maundy Thursday",
+            "date": "2020-04-09",
+            "observed": "2020-04-09",
+            "public": true,
+            "country": "ES",
+            "uuid": "04c0382e-d0e3-4f3d-960c-423306990517",
+            "weekday": {
+                "date": {
+                    "name": "Thursday",
+                    "numeric": "4"
+                },
+                "observed": {
+                    "name": "Thursday",
+                    "numeric": "4"
+                }
+            }
+        },
+        {
+            "name": "Good Friday",
+            "date": "2020-04-10",
+            "observed": "2020-04-10",
+            "public": true,
+            "country": "ES",
+            "uuid": "b2312e00-37b8-4621-bc08-dddd28af5376",
+            "weekday": {
+                "date": {
+                    "name": "Friday",
+                    "numeric": "5"
+                },
+                "observed": {
+                    "name": "Friday",
+                    "numeric": "5"
+                }
+            }
+        },
+        {
+            "name": "Easter",
+            "date": "2020-04-12",
+            "observed": "2020-04-12",
+            "public": false,
+            "country": "ES",
+            "uuid": "4ceb7ff4-bcac-4bd2-999f-649543bb1667",
+            "weekday": {
+                "date": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                },
+                "observed": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                }
+            }
+        },
+        {
+            "name": "Labor Day",
+            "date": "2020-05-01",
+            "observed": "2020-05-01",
+            "public": true,
+            "country": "ES",
+            "uuid": "bb16baec-689d-4540-b7d6-c58092e24584",
+            "weekday": {
+                "date": {
+                    "name": "Friday",
+                    "numeric": "5"
+                },
+                "observed": {
+                    "name": "Friday",
+                    "numeric": "5"
+                }
+            }
+        },
+        {
+            "name": "Mother's Day",
+            "date": "2020-05-03",
+            "observed": "2020-05-03",
+            "public": false,
+            "country": "ES",
+            "uuid": "15844930-ec4e-4249-b514-fce62ea11e03",
+            "weekday": {
+                "date": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                },
+                "observed": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                }
+            }
+        },
+        {
+            "name": "Pentecost",
+            "date": "2020-05-31",
+            "observed": "2020-05-31",
+            "public": false,
+            "country": "ES",
+            "uuid": "5fbc51f6-135d-434a-860d-bf2ee65d58ef",
+            "weekday": {
+                "date": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                },
+                "observed": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                }
+            }
+        },
+        {
+            "name": "Pentecost Monday",
+            "date": "2020-06-01",
+            "observed": "2020-06-01",
+            "public": false,
+            "country": "ES",
+            "uuid": "ab51995e-4d50-41a5-9297-4a2c2dacf1d6",
+            "weekday": {
+                "date": {
+                    "name": "Monday",
+                    "numeric": "1"
+                },
+                "observed": {
+                    "name": "Monday",
+                    "numeric": "1"
+                }
+            }
+        },
+        {
+            "name": "June Solstice",
+            "date": "2020-06-20",
+            "observed": "2020-06-20",
+            "public": false,
+            "country": "ES",
+            "uuid": "3a7f31d1-88b3-4008-9977-5f3a36c0b0c8",
+            "weekday": {
+                "date": {
+                    "name": "Saturday",
+                    "numeric": "6"
+                },
+                "observed": {
+                    "name": "Saturday",
+                    "numeric": "6"
+                }
+            }
+        },
+        {
+            "name": "International Asteroid Day",
+            "date": "2020-06-30",
+            "observed": "2020-06-30",
+            "public": false,
+            "country": "ES",
+            "uuid": "d182c450-e054-4010-aa62-7032bd25153e",
+            "weekday": {
+                "date": {
+                    "name": "Tuesday",
+                    "numeric": "2"
+                },
+                "observed": {
+                    "name": "Tuesday",
+                    "numeric": "2"
+                }
+            }
+        },
+        {
+            "name": "Nelson Mandela International Day",
+            "date": "2020-07-18",
+            "observed": "2020-07-18",
+            "public": false,
+            "country": "ES",
+            "uuid": "e1a846ab-da8c-4531-a60e-8a6a9f8cb926",
+            "weekday": {
+                "date": {
+                    "name": "Saturday",
+                    "numeric": "6"
+                },
+                "observed": {
+                    "name": "Saturday",
+                    "numeric": "6"
+                }
+            }
+        },
+        {
+            "name": "Assumption of Mary",
+            "date": "2020-08-15",
+            "observed": "2020-08-15",
+            "public": true,
+            "country": "ES",
+            "uuid": "5e759f78-a46a-485e-9cd2-71fce2cf9d47",
+            "weekday": {
+                "date": {
+                    "name": "Saturday",
+                    "numeric": "6"
+                },
+                "observed": {
+                    "name": "Saturday",
+                    "numeric": "6"
+                }
+            }
+        },
+        {
+            "name": "September Equinox",
+            "date": "2020-09-22",
+            "observed": "2020-09-22",
+            "public": false,
+            "country": "ES",
+            "uuid": "14220d40-6c62-47cf-a9b8-7d47c6b2b4ed",
+            "weekday": {
+                "date": {
+                    "name": "Tuesday",
+                    "numeric": "2"
+                },
+                "observed": {
+                    "name": "Tuesday",
+                    "numeric": "2"
+                }
+            }
+        },
+        {
+            "name": "Hispanic Heritage Day",
+            "date": "2020-10-12",
+            "observed": "2020-10-12",
+            "public": true,
+            "country": "ES",
+            "uuid": "cb06098e-2d9f-4d15-8bba-e6c91bd2fc2f",
+            "weekday": {
+                "date": {
+                    "name": "Monday",
+                    "numeric": "1"
+                },
+                "observed": {
+                    "name": "Monday",
+                    "numeric": "1"
+                }
+            }
+        },
+        {
+            "name": "End of Daylight Saving Time",
+            "date": "2020-10-25",
+            "observed": "2020-10-25",
+            "public": false,
+            "country": "ES",
+            "uuid": "189a7001-e57c-44fc-8f6d-c7fb72c2911f",
+            "weekday": {
+                "date": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                },
+                "observed": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                }
+            }
+        },
+        {
+            "name": "All Saints' Day",
+            "date": "2020-11-01",
+            "observed": "2020-11-02",
+            "public": true,
+            "country": "ES",
+            "uuid": "d166f219-3ed0-4768-944e-79128d465151",
+            "weekday": {
+                "date": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                },
+                "observed": {
+                    "name": "Monday",
+                    "numeric": "1"
+                }
+            }
+        },
+        {
+            "name": "Day of the Constitution",
+            "date": "2020-12-06",
+            "observed": "2020-12-06",
+            "public": true,
+            "country": "ES",
+            "uuid": "2460ee0b-2aed-49c5-9cb4-c6d76dda8f9b",
+            "weekday": {
+                "date": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                },
+                "observed": {
+                    "name": "Sunday",
+                    "numeric": "7"
+                }
+            }
+        },
+        {
+            "name": "Feast of the Immaculate Conception",
+            "date": "2020-12-08",
+            "observed": "2020-12-08",
+            "public": true,
+            "country": "ES",
+            "uuid": "1a260fc0-f7bf-4d17-8fe1-7ad9bf381e15",
+            "weekday": {
+                "date": {
+                    "name": "Tuesday",
+                    "numeric": "2"
+                },
+                "observed": {
+                    "name": "Tuesday",
+                    "numeric": "2"
+                }
+            }
+        },
+        {
+            "name": "December Solstice",
+            "date": "2020-12-21",
+            "observed": "2020-12-21",
+            "public": false,
+            "country": "ES",
+            "uuid": "dafaac79-3f09-4c1c-9c9c-17d2a29a19c9",
+            "weekday": {
+                "date": {
+                    "name": "Monday",
+                    "numeric": "1"
+                },
+                "observed": {
+                    "name": "Monday",
+                    "numeric": "1"
+                }
+            }
+        },
+        {
+            "name": "Christmas Eve",
+            "date": "2020-12-24",
+            "observed": "2020-12-24",
+            "public": false,
+            "country": "ES",
+            "uuid": "cbb7e9af-a3f2-4d0b-aaf3-27156b413be9",
+            "weekday": {
+                "date": {
+                    "name": "Thursday",
+                    "numeric": "4"
+                },
+                "observed": {
+                    "name": "Thursday",
+                    "numeric": "4"
+                }
+            }
+        },
+        {
+            "name": "Christmas Day",
+            "date": "2020-12-25",
+            "observed": "2020-12-25",
+            "public": true,
+            "country": "ES",
+            "uuid": "e273f9bc-d549-47b0-af45-3f09d1cbae46",
+            "weekday": {
+                "date": {
+                    "name": "Friday",
+                    "numeric": "5"
+                },
+                "observed": {
+                    "name": "Friday",
+                    "numeric": "5"
+                }
+            }
+        },
+        {
+            "name": "New Year's Eve",
+            "date": "2020-12-31",
+            "observed": "2020-12-31",
+            "public": false,
+            "country": "ES",
+            "uuid": "ba3933a2-44b7-4475-b40a-3218f8e377bc",
+            "weekday": {
+                "date": {
+                    "name": "Thursday",
+                    "numeric": "4"
+                },
+                "observed": {
+                    "name": "Thursday",
+                    "numeric": "4"
+                }
+            }
+        }
+    ]
+}

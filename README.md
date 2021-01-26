@@ -39,8 +39,53 @@ MVVM guides us how to distribute responsibilities between classes in a GUI appli
 
 'Proper' MVVM assumes at least a moderately complex application, which deals with data it gets from "somewhere". It may get the data from a database, a file or a web service.
 
+## Frameworks
 
-## Installation
+In this section it defends the reason to use each framework installed in the project.
+
+### RxSwift
+
+This advantages are several but the most importants are: 
+- Asynchrony is simplified with Declarative Code.
+- Multithreading is simplified.
+- Cleaner Code & Architectures.
+- Composable Components.
+- Multi-Platform
+
+Conversely the downsides are mainly two:
+- The learning process can be quite intimidating at the beginning.
+- You need to be familiar with block closures and functional programming concepts.
+- It is easy to create memory leaks if you are not careful with self references inside closures.
+
+Finally, to sum, reactive programming help you to write better, cleaner code and create components that can be reused in a robust codebase that can evolve. So the  disadvantages are justified. 
+
+### Swinject
+
+Swinject is framework to manage the DI (Dependency Injection) so the best way to justify it it is explaining the reason to use DI.
+
+Dependency Injection is a pattern that allows an object to be injected in a way that is completely independent of any object consumption. This improves when any change needs to be made on one side will not impact another side implementation.
+Dependency injection separates the creation of an object dependency from the object behavior, which allows program designs to be less coupled.
+
+We could to create own implementatio to manage DI but Swinject is well maintained and developed by the community powered by the Swift generic type system and first class functions to define dependencies of your app simply and fluently. Besides it supports a lot of ways/plugins to register components which improve and simplify the organizacion
+
+### Moya
+
+Firstly, Moya is a abstraction layer over Alamofire. If you know Alamofire is used to abstract away access to URLSession and all those nasty details. 
+
+Nowadays, looking at the URLSession APIs available, it’s a lot easier to build up network requests. However, doing so will likely move you towards building your own networking layer on top of URLSession. This layer needs to be tested and can potentially grow towards a more complex layer as your project evolves.
+
+With that in mind, taking the fact that Alamofire is well maintained and used by a lot of projects, you’re probably saving yourself a lot of hassle and time by adding Alamofire as a dependency. Besides, it is quite small and makes it way more elegant to write network requests.
+
+On the hand it needs to explain the reason to add one more abstraction layer as it is Moya. Moya solves some problems that Alamofire does not manage as:
+
+- Abstracts away the nitty gritty of URLs, parameters, etc
+- Lets you define a clear usage of different endpoints with associated enum values.
+- Treats test stubs as first-class citizens so unit testing is super-easy.
+- Plugins to log, authentication, etc.
+
+### XCoordinator
+
+
 
 
 

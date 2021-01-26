@@ -10,9 +10,7 @@ import RxSwift
 import Action
 import iHolidaysDomain
 
-class HolidaysViewController: UIViewController, BindableType {
-    var viewModel: HolidaysViewModel!
-
+class HolidaysViewController: BindableViewController<HolidaysViewModel> {
     // MARK: Views
     @IBOutlet private var tableView: UITableView!
 
@@ -25,7 +23,6 @@ class HolidaysViewController: UIViewController, BindableType {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.register(HolidayTableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
         tableView.rowHeight = 44
     }
@@ -41,7 +38,9 @@ class HolidaysViewController: UIViewController, BindableType {
 
     // MARK: BindableType
 
-    func bindViewModel() {
+    override func bindViewModel() {
+        super.bindViewModel()
+        
         tableView.rx.modelSelected(Holiday.self)
             .asDriver()
             .drive(viewModel.input.selectHoliday)

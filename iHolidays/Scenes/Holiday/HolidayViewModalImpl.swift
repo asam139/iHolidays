@@ -1,5 +1,5 @@
 //
-//  HolidayViewModalImpl.swift
+//  HolidayViewModal.swift
 //  iHolidays
 //
 //  Created by Saúl Moreno Abril on 24/1/21.
@@ -10,7 +10,7 @@ import RxSwift
 import Action
 import XCoordinator
 
-class HolidayViewModelImpl: HolidayViewModel {
+class HolidayViewModel: ViewModelType {
     
     let disposeBag = DisposeBag()
 
@@ -53,7 +53,7 @@ class HolidayViewModelImpl: HolidayViewModel {
 
     // MARK: Initialization
     
-    init(router: UnownedRouter<HolidayRoute>, holiday: String) {
+    init(holiday: String, router: UnownedRouter<HolidayRoute>) {
         self.router = router
         self.holiday = .just(holiday)
     }

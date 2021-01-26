@@ -15,8 +15,3 @@ struct HolidayViewModelOutput {
     let holiday: Observable<String>
 }
 
-protocol HolidayViewModel {
-    var input: HolidayViewModelInput { get }
-    var output: HolidayViewModelOutput { get }
-}
-

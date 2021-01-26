@@ -17,6 +17,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "../iHolidaysDomain", .upToNextMinor(from: "1.0.0")),
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .exact("5.1.1")),
         .package(url: "https://github.com/Moya/Moya.git", .upToNextMinor(from: "14.0.0"))
     ],
     targets: [
@@ -26,6 +27,8 @@ let package = Package(
             name: "iHolidaysData",
             dependencies: [
                 "iHolidaysDomain",
+                .product(name: "RxSwift", package: "RxSwift"),
+                .product(name: "RxCocoa", package: "RxSwift"),
                 .product(name: "RxMoya", package: "Moya")
             ],
             resources: [.process("Stubs")]

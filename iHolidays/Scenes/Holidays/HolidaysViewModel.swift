@@ -7,29 +7,23 @@
 
 import Foundation
 import RxSwift
-import Action
 import XCoordinator
-import iHolidaysDomain
 import Swinject
+import iHolidaysDomain
 
 class HolidaysViewModel: ViewModelType {
     let disposeBag = DisposeBag()
 
     // MARK: Inputs
     private lazy var fetchHolidays = PublishSubject<Void>()
+    private lazy var selectHoliday = PublishSubject<Holiday>()
     
     lazy var input: HolidaysViewModelInput = {
         HolidaysViewModelInput(
             fetchHolidaysTrigger: fetchHolidays.asObserver(),
-            selectHoliday: selectHolidayAction.inputs
+            selectHoliday: selectHoliday.asObserver()
         )
     }()
-    
-    // MARK: Actions
-    
-    lazy var selectHolidayAction = Action<Holiday, Void> { [unowned self] holiday in
-        self.router.rx.trigger(.holiday(holiday))
-    }
     
     // MARK: Outputs
     private lazy var holidaysSub = PublishSubject<[Holiday]>()
@@ -45,6 +39,10 @@ class HolidaysViewModel: ViewModelType {
             .flatMap { [userUseCase] in userUseCase.getHolidays(country: "ES", year: 2020) }
             .bind(to: holidaysSub)
             .disposed(by: disposeBag)
+        
+        selectHoliday
+            .flatMap { [router] in router.rx.trigger(.holiday($0)) }
+            .subscribe().disposed(by: disposeBag)
 
         return HolidaysViewModelOutput(holidays: holidaysSub.asObservable())
     }
@@ -59,5 +57,9 @@ class HolidaysViewModel: ViewModelType {
     init(router: UnownedRouter<HolidaysRoute>, resolver: Resolver) {
         self.router = router
         self.userUseCase = resolver.resolve(UserUseCase.self)!
+    }
+    
+    deinit {
+        print("Deinit \(self)")
     }
 }

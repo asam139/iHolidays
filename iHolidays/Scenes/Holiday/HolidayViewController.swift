@@ -7,7 +7,7 @@
 
 import UIKit
 import RxSwift
-import Action
+import RxCocoa
 
 class HolidayViewController: UIViewController, BindableType {
     var viewModel: HolidayViewModel!
@@ -32,22 +32,17 @@ class HolidayViewController: UIViewController, BindableType {
     }
     
     deinit {
-        print("Deinit")
+        print("Deinit \(self)")
     }
 
     // MARK: BindableType
 
     func bindViewModel() {
-        button.rx.action = onDone
+        button.rx.tap.subscribe(onNext: { [unowned self] in
+            self.viewModel.input.dismissTrigger.onNext(())
+        }).disposed(by: disposeBag)
         viewModel.output.holiday.map { $0.name }
             .asDriver(onErrorJustReturn: "")
             .drive(label.rx.text).disposed(by: disposeBag)
-    }
-    
-    // MARK: Actions
-    
-    private lazy var onDone = CocoaAction { [unowned self] in
-        self.viewModel.input.dismissTrigger.onNext(())
-        return .empty()
     }
 }

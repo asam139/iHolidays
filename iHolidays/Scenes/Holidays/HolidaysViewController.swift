@@ -7,7 +7,6 @@
 
 import UIKit
 import RxSwift
-import Action
 import iHolidaysDomain
 
 class HolidaysViewController: BindableViewController<HolidaysViewModel> {
@@ -29,11 +28,11 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetch.execute()
+        fecth()
     }
     
     deinit {
-        print("Deinit")
+        print("Deinit \(self)")
     }
 
     // MARK: BindableType
@@ -57,12 +56,8 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
             .disposed(by: disposeBag)
     }
     
-    // MARK: Actions
-    
-    lazy var fetch = CocoaAction { [unowned self] in
-        self.viewModel.input.fetchHolidaysTrigger.onNext(())
-        return .empty()
+    private func fecth() {
+        viewModel.input.fetchHolidaysTrigger.onNext(())
     }
-
 }
 

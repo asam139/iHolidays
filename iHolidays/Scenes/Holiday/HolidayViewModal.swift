@@ -7,7 +7,6 @@
 
 import Foundation
 import RxSwift
-import Action
 import XCoordinator
 import iHolidaysDomain
 
@@ -31,18 +30,12 @@ class HolidayViewModel: ViewModelType {
         transformInput()
     }()
     
-    // MARK: Actions
-    
-    private lazy var route = Action<HolidayRoute, Void> { [router] in
-        router.rx.trigger($0)
-    }
-    
     // MARK: Transform
     func transformInput() -> HolidayViewModelOutput {
         
         dismissTrigger
-            .map { _ in HolidayRoute.holidays }
-            .bind(to: route.inputs)
+            .flatMap { [router] in router.rx.trigger(.holidays)}
+            .subscribe()
             .disposed(by: disposeBag)
         
         return HolidayViewModelOutput(holiday: holiday)
@@ -59,4 +52,7 @@ class HolidayViewModel: ViewModelType {
         self.holiday = .just(holiday)
     }
 
+    deinit {
+        print("Deinit \(self)")
+    }
 }

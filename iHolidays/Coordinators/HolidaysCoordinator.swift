@@ -34,6 +34,7 @@ class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
             let viewController = HolidaysViewController(nibName: "HolidaysViewController", bundle: nil)
             let viewModel = assembler.resolver.resolve(HolidaysViewModel.self, argument: unownedRouter)!
             viewController.bind(to: viewModel)
+            return .push(viewController, animation: .navigation)
             return .push(viewController)
         case .holiday(let holiday):
             let coordinator = HolidayCoordinator(rootViewController: rootViewController, holiday: holiday, assembler: assembler)

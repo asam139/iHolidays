@@ -56,7 +56,7 @@ Conversely the downsides are mainly two:
 - You need to be familiar with block closures and functional programming concepts.
 - It is easy to create memory leaks if you are not careful with self references inside closures.
 
-Finally, to sum, reactive programming help you to write better, cleaner code and create components that can be reused in a robust codebase that can evolve. So the  disadvantages are justified. 
+Finally, to sum, reactive programming help you to write better, **cleaner code** and create components that can be **reused** in a **robust** codebase that can evolve. So the  disadvantages are justified. 
 
 ### Swinject
 
@@ -73,7 +73,7 @@ Firstly, Moya is a abstraction layer over Alamofire. If you know Alamofire is us
 
 Nowadays, looking at the URLSession APIs available, it’s a lot easier to build up network requests. However, doing so will likely move you towards building your own networking layer on top of URLSession. This layer needs to be tested and can potentially grow towards a more complex layer as your project evolves.
 
-With that in mind, taking the fact that Alamofire is **well maintained** and used by a lot of projects, you’re probably saving yourself a lot of hassle and time by adding Alamofire as a dependency. Besides, it is **quite small** and makes it way **more elegant** to write network requests.
+With that in mind, taking the fact that **Alamofire** is **well maintained** and used by a lot of projects, you’re probably saving yourself a lot of hassle and time by adding Alamofire as a dependency. Besides, it is **quite small** and makes it way **more elegant** to write network requests.
 
 On the hand it needs to explain the reason to add one more abstraction layer as it is Moya. Moya solves some problems that Alamofire does not manage as:
 
@@ -81,6 +81,8 @@ On the hand it needs to explain the reason to add one more abstraction layer as 
 - Lets you define a clear usage of different **endpoints** with **associated enum values**.
 - Treats test stubs as first-class citizens so **unit testing** is super-easy.
 - **Plugins** to log, authentication, etc.
+
+Also definitely it is well maintained and quite small (only a few classes and protocols).
 
 ### XCoordinator
 

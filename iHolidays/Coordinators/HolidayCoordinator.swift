@@ -8,9 +8,10 @@
 import UIKit
 import XCoordinator
 import Swinject
+import iHolidaysDomain
 
 enum HolidayRoute: Route {
-    case home(String)
+    case home(Holiday)
     case holidays
 }
 
@@ -19,7 +20,7 @@ class HolidayCoordinator: NavigationCoordinator<HolidayRoute> {
     private let assembler: Assembler
 
     // MARK: Initialization
-    init(rootViewController: UINavigationController, holiday: String, assembler: Assembler) {
+    init(rootViewController: UINavigationController, holiday: Holiday, assembler: Assembler) {
         self.assembler = assembler
         super.init(rootViewController: rootViewController, initialRoute: nil)
         trigger(.home(holiday))

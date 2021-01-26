@@ -9,10 +9,11 @@ import UIKit
 import XCoordinator
 import XCoordinatorRx
 import Swinject
+import iHolidaysDomain
 
 enum HolidaysRoute: Route {
     case home
-    case holiday(String)
+    case holiday(Holiday)
 }
 
 class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {

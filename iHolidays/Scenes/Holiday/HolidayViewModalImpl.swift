@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 import Action
 import XCoordinator
+import iHolidaysDomain
 
 class HolidayViewModel: ViewModelType {
     
@@ -24,7 +25,7 @@ class HolidayViewModel: ViewModelType {
     }()
     
     // MARK: Outputs
-    private var holiday: Observable<String>
+    private var holiday: Observable<Holiday>
     
     lazy var output: HolidayViewModelOutput = {
         transformInput()
@@ -53,7 +54,7 @@ class HolidayViewModel: ViewModelType {
 
     // MARK: Initialization
     
-    init(holiday: String, router: UnownedRouter<HolidayRoute>) {
+    init(holiday: Holiday, router: UnownedRouter<HolidayRoute>) {
         self.router = router
         self.holiday = .just(holiday)
     }

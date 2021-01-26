@@ -28,7 +28,7 @@ class HolidaysViewModel: ViewModelType {
     // MARK: Actions
     
     lazy var selectHolidayAction = Action<Holiday, Void> { [unowned self] holiday in
-        self.router.rx.trigger(.holiday(holiday.name))
+        self.router.rx.trigger(.holiday(holiday))
     }
     
     // MARK: Outputs

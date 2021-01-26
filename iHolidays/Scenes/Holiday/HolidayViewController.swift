@@ -39,7 +39,7 @@ class HolidayViewController: UIViewController, BindableType {
 
     func bindViewModel() {
         button.rx.action = onDone
-        viewModel.output.holiday
+        viewModel.output.holiday.map { $0.name }
             .asDriver(onErrorJustReturn: "")
             .drive(label.rx.text).disposed(by: disposeBag)
     }

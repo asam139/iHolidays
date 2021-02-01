@@ -32,7 +32,7 @@ class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
     override func prepareTransition(for route: HolidaysRoute) -> NavigationTransition {
         switch route {
         case .home:
-            let viewController = HolidaysViewController(nibName: "HolidaysViewController", bundle: nil)
+            let viewController = HolidaysViewController(nib: R.nib.holidaysViewController)
             let viewModel = assembler.resolver.resolve(HolidaysViewModel.self, argument: unownedRouter)!
             viewController.bind(to: viewModel)
             return .push(viewController, animation: .navigation)

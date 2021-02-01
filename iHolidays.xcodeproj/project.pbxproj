@@ -12,6 +12,7 @@
 		86305DC825C00D320091521B /* Animation+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86305DC725C00D320091521B /* Animation+Navigation.swift */; };
 		86305DD025C017C90091521B /* BindableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86305DCF25C017C90091521B /* BindableViewController.swift */; };
 		86305DD525C019BF0091521B /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86305DD425C019BF0091521B /* ViewModelType.swift */; };
+		865C0BD925C815A5002BFCCD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C0BD825C815A5002BFCCD /* R.generated.swift */; };
 		868333BB25BED05200F26976 /* Transitions+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868333BA25BED05200F26976 /* Transitions+.swift */; };
 		86A696B125BF52A80067C25B /* HolidaysViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A696B025BF52A80067C25B /* HolidaysViewModelAssembly.swift */; };
 		86A696B625BF549B0067C25B /* HolidayViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A696B525BF549B0067C25B /* HolidayViewModelAssembly.swift */; };
@@ -75,6 +76,7 @@
 		86305DCF25C017C90091521B /* BindableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableViewController.swift; sourceTree = "<group>"; };
 		86305DD425C019BF0091521B /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		863D1BB65A1EFD9A9730C3E6 /* Pods-iHolidays-iHolidaysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays-iHolidaysUITests.release.xcconfig"; path = "Target Support Files/Pods-iHolidays-iHolidaysUITests/Pods-iHolidays-iHolidaysUITests.release.xcconfig"; sourceTree = "<group>"; };
+		865C0BD825C815A5002BFCCD /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		868333BA25BED05200F26976 /* Transitions+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transitions+.swift"; sourceTree = "<group>"; };
 		86A696B025BF52A80067C25B /* HolidaysViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysViewModelAssembly.swift; sourceTree = "<group>"; };
 		86A696B525BF549B0067C25B /* HolidayViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewModelAssembly.swift; sourceTree = "<group>"; };
@@ -167,16 +169,10 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		865C0BA725C74E8D002BFCCD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		865C0BBF25C81244002BFCCD /* R.swift */ = {
 			isa = PBXGroup;
 			children = (
+				865C0BD825C815A5002BFCCD /* R.generated.swift */,
 			);
 			path = R.swift;
 			sourceTree = "<group>";
@@ -233,7 +229,6 @@
 				86CFD1B525BE140C006A53E6 /* Coordinators */,
 				86305DC625C00CE60091521B /* Animations */,
 				86CFD16F25BDFDC4006A53E6 /* Scenes */,
-				865C0BA725C74E8D002BFCCD /* Views */,
 				868333B925BED04300F26976 /* Extensions */,
 				86CFD13F25BDFD54006A53E6 /* Assets.xcassets */,
 				86CFD14125BDFD54006A53E6 /* LaunchScreen.storyboard */,
@@ -666,6 +661,7 @@
 				86CFD1EE25BE1E81006A53E6 /* HolidayCoordinator.swift in Sources */,
 				86ED9B3D25BF13F4001DE8B0 /* Config.swift in Sources */,
 				86305DD525C019BF0091521B /* ViewModelType.swift in Sources */,
+				865C0BD925C815A5002BFCCD /* R.generated.swift in Sources */,
 				86ED9B5F25BF3AF2001DE8B0 /* ServicesAssembly.swift in Sources */,
 				86CFD17525BDFE23006A53E6 /* HolidaysViewModelTypes.swift in Sources */,
 				86ED9B5A25BF3A54001DE8B0 /* CommonAssembly.swift in Sources */,

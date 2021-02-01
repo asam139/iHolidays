@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B27167ED75038641EE6CCAB /* Pods_iHolidays_iHolidaysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88A6043821AD7C19C6EFEF34 /* Pods_iHolidays_iHolidaysUITests.framework */; };
+		4FDDE465D7E032B05ABDB17B /* Pods_iHolidays.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349F8C6CF03486CF1E7CF9D4 /* Pods_iHolidays.framework */; };
 		86305DC825C00D320091521B /* Animation+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86305DC725C00D320091521B /* Animation+Navigation.swift */; };
 		86305DD025C017C90091521B /* BindableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86305DCF25C017C90091521B /* BindableViewController.swift */; };
 		86305DD525C019BF0091521B /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86305DD425C019BF0091521B /* ViewModelType.swift */; };
@@ -43,6 +45,7 @@
 		86ED9B5F25BF3AF2001DE8B0 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B5E25BF3AF2001DE8B0 /* ServicesAssembly.swift */; };
 		86ED9B6425BF3CD0001DE8B0 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B6325BF3CD0001DE8B0 /* RepositoriesAssembly.swift */; };
 		86ED9B6D25BF3D32001DE8B0 /* UseCasesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */; };
+		D119EAB8B054AB4BAA770E2D /* Pods_iHolidaysTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3CDD3C763A6E79001F906 /* Pods_iHolidaysTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +66,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01BA74FDCD60E96434584EDB /* Pods-iHolidaysTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidaysTests.release.xcconfig"; path = "Target Support Files/Pods-iHolidaysTests/Pods-iHolidaysTests.release.xcconfig"; sourceTree = "<group>"; };
+		2EA922CAF29DE06BD817092F /* Pods-iHolidays-iHolidaysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays-iHolidaysUITests.debug.xcconfig"; path = "Target Support Files/Pods-iHolidays-iHolidaysUITests/Pods-iHolidays-iHolidaysUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		349F8C6CF03486CF1E7CF9D4 /* Pods_iHolidays.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iHolidays.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F64E027BFBA5E3819DD3820 /* Pods-iHolidaysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidaysTests.debug.xcconfig"; path = "Target Support Files/Pods-iHolidaysTests/Pods-iHolidaysTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57A3CDD3C763A6E79001F906 /* Pods_iHolidaysTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iHolidaysTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86305DC725C00D320091521B /* Animation+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation+Navigation.swift"; sourceTree = "<group>"; };
 		86305DCF25C017C90091521B /* BindableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableViewController.swift; sourceTree = "<group>"; };
 		86305DD425C019BF0091521B /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		863D1BB65A1EFD9A9730C3E6 /* Pods-iHolidays-iHolidaysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays-iHolidaysUITests.release.xcconfig"; path = "Target Support Files/Pods-iHolidays-iHolidaysUITests/Pods-iHolidays-iHolidaysUITests.release.xcconfig"; sourceTree = "<group>"; };
 		868333BA25BED05200F26976 /* Transitions+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transitions+.swift"; sourceTree = "<group>"; };
 		86A696B025BF52A80067C25B /* HolidaysViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysViewModelAssembly.swift; sourceTree = "<group>"; };
 		86A696B525BF549B0067C25B /* HolidayViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewModelAssembly.swift; sourceTree = "<group>"; };
@@ -104,6 +113,9 @@
 		86ED9B5E25BF3AF2001DE8B0 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		86ED9B6325BF3CD0001DE8B0 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
 		86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesAssembly.swift; sourceTree = "<group>"; };
+		88A6043821AD7C19C6EFEF34 /* Pods_iHolidays_iHolidaysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iHolidays_iHolidaysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBBA7A40758EC1325A6C678B /* Pods-iHolidays.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays.release.xcconfig"; path = "Target Support Files/Pods-iHolidays/Pods-iHolidays.release.xcconfig"; sourceTree = "<group>"; };
+		F80D403E85EE11B46F55BFA7 /* Pods-iHolidays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays.debug.xcconfig"; path = "Target Support Files/Pods-iHolidays/Pods-iHolidays.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,7 @@
 				86B8DA5925C06E19005E7669 /* iHolidaysDomain in Frameworks */,
 				86B8DA5D25C06E19005E7669 /* RxMoya in Frameworks */,
 				86B8DA5B25C06E19005E7669 /* XCoordinatorRx in Frameworks */,
+				4FDDE465D7E032B05ABDB17B /* Pods_iHolidays.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D119EAB8B054AB4BAA770E2D /* Pods_iHolidaysTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B27167ED75038641EE6CCAB /* Pods_iHolidays_iHolidaysUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +174,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		865C0BBF25C81244002BFCCD /* R.swift */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = R.swift;
+			sourceTree = "<group>";
+		};
 		868333B925BED04300F26976 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +206,8 @@
 				86CFD14C25BDFD55006A53E6 /* iHolidaysTests */,
 				86CFD15725BDFD55006A53E6 /* iHolidaysUITests */,
 				86CFD13425BDFD51006A53E6 /* Products */,
+				9C2E82C565B0A0565011043D /* Pods */,
+				E2BCA5CDF1F4D71936DBE6DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +227,7 @@
 				86CFD13625BDFD51006A53E6 /* AppDelegate.swift */,
 				86CFD13825BDFD51006A53E6 /* SceneDelegate.swift */,
 				86ED9B1B25BF12F3001DE8B0 /* Config */,
+				865C0BBF25C81244002BFCCD /* R.swift */,
 				86ED9B0925BF1102001DE8B0 /* DI */,
 				86CFD18A25BE027E006A53E6 /* MVVM */,
 				86CFD1B525BE140C006A53E6 /* Coordinators */,
@@ -327,6 +352,29 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		9C2E82C565B0A0565011043D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F80D403E85EE11B46F55BFA7 /* Pods-iHolidays.debug.xcconfig */,
+				CBBA7A40758EC1325A6C678B /* Pods-iHolidays.release.xcconfig */,
+				2EA922CAF29DE06BD817092F /* Pods-iHolidays-iHolidaysUITests.debug.xcconfig */,
+				863D1BB65A1EFD9A9730C3E6 /* Pods-iHolidays-iHolidaysUITests.release.xcconfig */,
+				3F64E027BFBA5E3819DD3820 /* Pods-iHolidaysTests.debug.xcconfig */,
+				01BA74FDCD60E96434584EDB /* Pods-iHolidaysTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E2BCA5CDF1F4D71936DBE6DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				349F8C6CF03486CF1E7CF9D4 /* Pods_iHolidays.framework */,
+				88A6043821AD7C19C6EFEF34 /* Pods_iHolidays_iHolidaysUITests.framework */,
+				57A3CDD3C763A6E79001F906 /* Pods_iHolidaysTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -334,9 +382,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86CFD15D25BDFD55006A53E6 /* Build configuration list for PBXNativeTarget "iHolidays" */;
 			buildPhases = (
+				8F54ADBC54C9C60B18236EAD /* [CP] Check Pods Manifest.lock */,
+				865C0BCE25C81354002BFCCD /* R.swift */,
 				86CFD12F25BDFD51006A53E6 /* Sources */,
 				86CFD13025BDFD51006A53E6 /* Frameworks */,
 				86CFD13125BDFD51006A53E6 /* Resources */,
+				7DEE074D920DFBA9B1A860FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -358,6 +409,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86CFD16025BDFD55006A53E6 /* Build configuration list for PBXNativeTarget "iHolidaysTests" */;
 			buildPhases = (
+				6575FBC896BA8F1F3661BE12 /* [CP] Check Pods Manifest.lock */,
 				86CFD14525BDFD55006A53E6 /* Sources */,
 				86CFD14625BDFD55006A53E6 /* Frameworks */,
 				86CFD14725BDFD55006A53E6 /* Resources */,
@@ -376,9 +428,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86CFD16325BDFD55006A53E6 /* Build configuration list for PBXNativeTarget "iHolidaysUITests" */;
 			buildPhases = (
+				0629C8803986E9D8854DBFB2 /* [CP] Check Pods Manifest.lock */,
 				86CFD15025BDFD55006A53E6 /* Sources */,
 				86CFD15125BDFD55006A53E6 /* Frameworks */,
 				86CFD15225BDFD55006A53E6 /* Resources */,
+				065C6F4196BEC2F0F2C6B903 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -464,6 +518,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0629C8803986E9D8854DBFB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iHolidays-iHolidaysUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		065C6F4196BEC2F0F2C6B903 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iHolidays-iHolidaysUITests/Pods-iHolidays-iHolidaysUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iHolidays-iHolidaysUITests/Pods-iHolidays-iHolidaysUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iHolidays-iHolidaysUITests/Pods-iHolidays-iHolidaysUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6575FBC896BA8F1F3661BE12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iHolidaysTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DEE074D920DFBA9B1A860FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iHolidays/Pods-iHolidays-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iHolidays/Pods-iHolidays-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iHolidays/Pods-iHolidays-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		865C0BCE25C81354002BFCCD /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/iHolidays/R.swift/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/iHolidays/R.swift/R.generated.swift\"\n";
+		};
+		8F54ADBC54C9C60B18236EAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iHolidays-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86CFD12F25BDFD51006A53E6 /* Sources */ = {
@@ -663,6 +840,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86ED9B1D25BF1324001DE8B0 /* Debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -683,6 +861,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86ED9B1C25BF131A001DE8B0 /* Release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -701,8 +880,9 @@
 		};
 		86CFD16125BDFD55006A53E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F64E027BFBA5E3819DD3820 /* Pods-iHolidaysTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iHolidaysTests/Info.plist;
@@ -722,8 +902,9 @@
 		};
 		86CFD16225BDFD55006A53E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01BA74FDCD60E96434584EDB /* Pods-iHolidaysTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iHolidaysTests/Info.plist;
@@ -743,8 +924,9 @@
 		};
 		86CFD16425BDFD55006A53E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EA922CAF29DE06BD817092F /* Pods-iHolidays-iHolidaysUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iHolidaysUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -762,8 +944,9 @@
 		};
 		86CFD16525BDFD55006A53E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 863D1BB65A1EFD9A9730C3E6 /* Pods-iHolidays-iHolidaysUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iHolidaysUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

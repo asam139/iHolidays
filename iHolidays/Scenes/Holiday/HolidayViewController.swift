@@ -9,9 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HolidayViewController: UIViewController, BindableType {
-    var viewModel: HolidayViewModel!
-
+class HolidayViewController: BindableViewController<HolidayViewModel> {
     // MARK: Views
     @IBOutlet private var label: UILabel!
     @IBOutlet private var button: UIButton!
@@ -37,7 +35,7 @@ class HolidayViewController: UIViewController, BindableType {
 
     // MARK: BindableType
 
-    func bindViewModel() {
+    override func bindViewModel() {
         button.rx.tap.subscribe(onNext: { [unowned self] in
             self.viewModel.input.dismissTrigger.onNext(())
         }).disposed(by: disposeBag)

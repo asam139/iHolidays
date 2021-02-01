@@ -18,8 +18,6 @@
 		86B8DA5B25C06E19005E7669 /* XCoordinatorRx in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5A25C06E19005E7669 /* XCoordinatorRx */; };
 		86B8DA5D25C06E19005E7669 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5C25C06E19005E7669 /* RxMoya */; };
 		86B8DA5F25C06E19005E7669 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5E25C06E19005E7669 /* Swinject */; };
-		86B8DA6125C06E19005E7669 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA6025C06E19005E7669 /* RxCocoa */; };
-		86B8DA6325C06E19005E7669 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA6225C06E19005E7669 /* RxSwift */; };
 		86CFD13725BDFD51006A53E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13625BDFD51006A53E6 /* AppDelegate.swift */; };
 		86CFD13925BDFD51006A53E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13825BDFD51006A53E6 /* SceneDelegate.swift */; };
 		86CFD13B25BDFD51006A53E6 /* HolidaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13A25BDFD51006A53E6 /* HolidaysViewController.swift */; };
@@ -113,13 +111,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86B8DA6125C06E19005E7669 /* RxCocoa in Frameworks */,
 				86B8DA5725C06E19005E7669 /* iHolidaysData in Frameworks */,
 				86B8DA5F25C06E19005E7669 /* Swinject in Frameworks */,
 				86B8DA5925C06E19005E7669 /* iHolidaysDomain in Frameworks */,
 				86B8DA5D25C06E19005E7669 /* RxMoya in Frameworks */,
 				86B8DA5B25C06E19005E7669 /* XCoordinatorRx in Frameworks */,
-				86B8DA6325C06E19005E7669 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +144,21 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		865C0BA625C74E83002BFCCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86CFD19F25BE11C0006A53E6 /* HolidayTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		865C0BA725C74E8D002BFCCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		868333B925BED04300F26976 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +184,6 @@
 				86CFD14C25BDFD55006A53E6 /* iHolidaysTests */,
 				86CFD15725BDFD55006A53E6 /* iHolidaysUITests */,
 				86CFD13425BDFD51006A53E6 /* Products */,
-				86ED9AFE25BEFD74001DE8B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,7 +208,7 @@
 				86CFD1B525BE140C006A53E6 /* Coordinators */,
 				86305DC625C00CE60091521B /* Animations */,
 				86CFD16F25BDFDC4006A53E6 /* Scenes */,
-				86CFD19E25BE11B0006A53E6 /* Views */,
+				865C0BA725C74E8D002BFCCD /* Views */,
 				868333B925BED04300F26976 /* Extensions */,
 				86CFD13F25BDFD54006A53E6 /* Assets.xcassets */,
 				86CFD14125BDFD54006A53E6 /* LaunchScreen.storyboard */,
@@ -237,6 +247,7 @@
 		86CFD17025BDFDCE006A53E6 /* Holidays */ = {
 			isa = PBXGroup;
 			children = (
+				865C0BA625C74E83002BFCCD /* Views */,
 				86CFD13A25BDFD51006A53E6 /* HolidaysViewController.swift */,
 				86CFD1A725BE121B006A53E6 /* HolidaysViewController.xib */,
 				86CFD17425BDFE23006A53E6 /* HolidaysViewModelTypes.swift */,
@@ -253,14 +264,6 @@
 				86305DCF25C017C90091521B /* BindableViewController.swift */,
 			);
 			path = MVVM;
-			sourceTree = "<group>";
-		};
-		86CFD19E25BE11B0006A53E6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				86CFD19F25BE11C0006A53E6 /* HolidayTableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		86CFD1B525BE140C006A53E6 /* Coordinators */ = {
@@ -291,13 +294,6 @@
 				86ED9AF225BEF8EA001DE8B0 /* iHolidaysData */,
 			);
 			path = Packages;
-			sourceTree = "<group>";
-		};
-		86ED9AFE25BEFD74001DE8B0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		86ED9B0925BF1102001DE8B0 /* DI */ = {
@@ -353,8 +349,6 @@
 				86B8DA5A25C06E19005E7669 /* XCoordinatorRx */,
 				86B8DA5C25C06E19005E7669 /* RxMoya */,
 				86B8DA5E25C06E19005E7669 /* Swinject */,
-				86B8DA6025C06E19005E7669 /* RxCocoa */,
-				86B8DA6225C06E19005E7669 /* RxSwift */,
 			);
 			productName = iHolidays;
 			productReference = 86CFD13325BDFD51006A53E6 /* iHolidays.app */;
@@ -431,7 +425,6 @@
 				86CFD16925BDFDA1006A53E6 /* XCRemoteSwiftPackageReference "XCoordinator" */,
 				86CFD17E25BE0008006A53E6 /* XCRemoteSwiftPackageReference "Moya" */,
 				86ED9B0625BF1100001DE8B0 /* XCRemoteSwiftPackageReference "Swinject" */,
-				86305DEE25C068D30091521B /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 86CFD13425BDFD51006A53E6 /* Products */;
 			projectDirPath = "";
@@ -828,14 +821,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		86305DEE25C068D30091521B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.1;
-			};
-		};
 		86CFD16925BDFDA1006A53E6 /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quickbirdstudios/XCoordinator";
@@ -885,16 +870,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 86ED9B0625BF1100001DE8B0 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		86B8DA6025C06E19005E7669 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 86305DEE25C068D30091521B /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		86B8DA6225C06E19005E7669 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 86305DEE25C068D30091521B /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

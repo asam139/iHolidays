@@ -11,38 +11,49 @@ import Moya
 public struct HolidaysApi: TargetType {
     public let baseURL: URL
     public let apiKey: String
-    public let route: Target
+    public let action: Action
 
-    public enum Target {
+    public enum Action {
         case getHolidays(country: String, year: UInt)
     }
     
     public var path: String {
-        switch route {
+        switch action {
         case .getHolidays:
             return "/holidays"
         }
     }
     
     public var method: Moya.Method {
-        switch route {
+        switch action {
         case .getHolidays:
             return .get
         }
     }
     
-    public var task: Task {
-        switch route {
+    private var parameters: [String: Any] {
+        var parameters = [String: Any]()
+        parameters["key"] = apiKey
+        
+        switch action {
         case .getHolidays(let country, let year):
-            let parameters = ["country": country, "year": String(year)]
+            parameters["country"] = country
+            parameters["year"] = String(year)
+        }
+        
+        return parameters
+    }
+    
+    public var task: Task {
+        switch action {
+        case .getHolidays:
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
-
     }
     
     public var sampleData: Data {
         let name: String
-        switch route {
+        switch action {
         case .getHolidays:
             name = "holidaysStub"
         }
@@ -56,6 +67,9 @@ public struct HolidaysApi: TargetType {
     }
     
     public var headers: [String: String]? {
-        return ["Content-type": "application/json"]
+        [
+            "Content-type": "application/json",
+            "key": apiKey
+        ]
     }
 }

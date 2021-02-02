@@ -10,7 +10,7 @@ iOS App using MVVM-C with Clean Architecture
 - **iOS** 11.0+ / **macOS** 10.15+ / **Xcode** 12.0+
 - Swift 5.0+
 
-## Arquicture
+## Architecture
 
 The app uses the MVVM-C with a Clean Architecture.
 
@@ -18,7 +18,7 @@ The app uses the MVVM-C with a Clean Architecture.
   <img src="https://raw.githubusercontent.com/asam139/iHolidays/master/Assets/architecture.jpg" title="Architecture" width="100%">
 </p>
 
-### Clean Arquicture
+### Clean Architecture
 
 So in the first place, why do we want to use clean architecture?
 - Separation of Concerns: separation of code in different modules or sections with specific responsibilities makes it easier for maintenance and further modification.

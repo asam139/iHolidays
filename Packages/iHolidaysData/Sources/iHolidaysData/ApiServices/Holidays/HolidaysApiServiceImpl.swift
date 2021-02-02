@@ -21,17 +21,19 @@ public class HolidaysApiServiceImpl: HolidaysApiService {
         self.provider = provider
     }
     
-    private func getTargetType(_ route: HolidaysApi.Target) -> HolidaysApi {
-        .init(baseURL: baseURL, apiKey: apiKey, route: route)
-    }
-    
     public func getHolidays(country: String, year: UInt) -> Single<[HolidayDTO]> {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(DateFormatter.yearMonthDay)
         //decoder.dateDecodingStrategy = .iso8601 // Error
         
-        return provider.rx.request(getTargetType(.getHolidays(country: country, year: year)))
+        return provider.rx.request(createAction(.getHolidays(country: country, year: year)))
             .map(HolidayResponseDTO.self, using: decoder)
             .map { $0.holidays ?? [] }
+    }
+}
+
+private extension HolidaysApiServiceImpl {
+    func createAction(_ action: HolidaysApi.Action) -> HolidaysApi {
+        .init(baseURL: baseURL, apiKey: apiKey, action: action)
     }
 }

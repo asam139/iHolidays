@@ -15,7 +15,7 @@ class ServicesAssembly: Assembly {
             HolidaysApiServiceImpl(
                 baseURL: Config.holidaysApiBaseURL,
                 apiKey: Config.holidaysApiKey,
-                provider: .init(stubClosure: MoyaProvider.delayedStub(0.1))
+                provider: .init()
             )
         }
     }

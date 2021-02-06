@@ -8,15 +8,17 @@
 import Foundation
 import Moya
 
-public struct HolidaysApi: TargetType {
-    public let baseURL: URL
+public struct HolidaysApi: BaseTargetType {
+    public let mainBaseURL: URL
     public let apiKey: String
     public let action: Action
-
+    
     public enum Action {
         case getHolidays(country: String, year: UInt)
     }
-    
+
+    public var baseURL: URL { mainBaseURL }
+ 
     public var path: String {
         switch action {
         case .getHolidays:

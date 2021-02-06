@@ -7,16 +7,27 @@
 
 import Foundation
 
-@objc class Config: NSObject {
+class Config {
+    // MARK: - Holidays Api
+    static let holidaysApiBaseURL: URL = {
+        getURL(forKey: "HOLIDAYS_API_BASE_URL")
+    }()
+    
+    static let holidaysApiKey: String = {
+        getString(forKey: "HOLIDAYS_API_KEY")
+    }()
+}
+
+extension Config {
     private static let infoDictionary: [String: Any] = {
-        Bundle.main.infoDictionary ?? [String: Any]()
+        Bundle.main.infoDictionary ?? [:]
     }()
 
-    static func getString(forKey key: String) -> String {
+    private static func getString(forKey key: String) -> String {
         (infoDictionary[key] as? String) ?? ""
     }
     
-    static func getURL(forKey key: String) -> URL {
+    private static func getURL(forKey key: String) -> URL {
         let string = getString(forKey: key)
         
         guard let url = URL(string: string) else {
@@ -24,15 +35,4 @@ import Foundation
         }
         return url
     }
-    
-    // MARK: - Holidays Api
-    
-    static let holidaysApiBaseURL: URL = {
-        getURL(forKey: "HOLIDAYS_API_BASE_URL")
-    }()
-    
-    @objc static let holidaysApiKey: String = {
-        getString(forKey: "HOLIDAYS_API_KEY")
-    }()
-    
 }

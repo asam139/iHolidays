@@ -34,6 +34,6 @@ public class HolidaysApiServiceImpl: HolidaysApiService {
 
 private extension HolidaysApiServiceImpl {
     func createAction(_ action: HolidaysApi.Action) -> HolidaysApi {
-        .init(baseURL: baseURL, apiKey: apiKey, action: action)
+        .init(mainBaseURL: baseURL, apiKey: apiKey, action: action)
     }
 }

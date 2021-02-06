@@ -12,3 +12,5 @@
 
 HOLIDAYS_API_BASE_URL = https:/$()/holidayapi.com/v1
 HOLIDAYS_API_KEY = 410fe27f-17e3-49cd-ba09-81297ff6cb77
+
+PICSUM_API_BASE_URL = https:/$()/picsum.photos

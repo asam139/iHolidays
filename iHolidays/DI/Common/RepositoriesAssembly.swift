@@ -15,6 +15,11 @@ class RepositoriesAssembly: Assembly {
             let service = container.resolve(HolidaysApiService.self)!
             return HolidaysRepositoryImpl(service: service)
         }
+        
+        container.register(PicsumRepository.self) { r in
+            let service = container.resolve(PicsumApiService.self)!
+            return PicsumRepositoryImpl(service: service)
+        }
     }
 }
 

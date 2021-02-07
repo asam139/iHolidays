@@ -1,13 +1,14 @@
 //
-//  File.swift
+//  FetchHolidaysUseCase.swift
 //  
 //
 //  Created by Saúl Moreno Abril on 25/1/21.
 //
 
+import Foundation
 import RxSwift
 
-public class UserUseCaseImpl: UserUseCase {
+public class FetchHolidaysUseCaseImpl: FetchHolidaysUseCase {
     let repository: HolidaysRepository
     
     public init(repository: HolidaysRepository) {

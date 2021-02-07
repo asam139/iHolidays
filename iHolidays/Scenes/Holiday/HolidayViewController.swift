@@ -36,8 +36,8 @@ class HolidayViewController: BindableViewController<HolidayViewModel> {
     // MARK: BindableType
 
     override func bindViewModel() {
-        button.rx.tap.subscribe(onNext: { [unowned self] in
-            self.viewModel.input.dismissTrigger.onNext(())
+        button.rx.tap.subscribe(onNext: { [viewModel] in
+            viewModel?.input.dismissTrigger.onNext(())
         }).disposed(by: disposeBag)
         viewModel.output.holiday.map { $0.name }
             .asDriver(onErrorJustReturn: "")

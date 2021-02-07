@@ -11,9 +11,14 @@ import iHolidaysData
 
 class UseCasesAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(UserUseCase.self) { r in
+        container.register(FetchHolidaysUseCase.self) { r in
             let repo = container.resolve(HolidaysRepository.self)!
-            return UserUseCaseImpl(repository: repo)
+            return FetchHolidaysUseCaseImpl(repository: repo)
+        }
+        
+        container.register(FetchPicsumUseCase.self) { r in
+            let repo = container.resolve(PicsumRepository.self)!
+            return FetchPicsumUseCaseImpl(repository: repo)
         }
     }
 }

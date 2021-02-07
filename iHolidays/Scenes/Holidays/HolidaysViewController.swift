@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import SDWebImage
 import iHolidaysDomain
 
 class HolidaysViewController: BindableViewController<HolidaysViewModel> {
@@ -40,18 +41,20 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
     override func bindViewModel() {
         super.bindViewModel()
         
-        tableView.rx.modelSelected(Holiday.self)
+        tableView.rx.modelSelected(HolidayWithImage.self)
             .asDriver()
+            .map { $0.holiday }
             .drive(viewModel.input.selectHoliday)
             .disposed(by: disposeBag)
         
         viewModel.output.holidays
             .asDriver(onErrorJustReturn: [])
             .drive(tableView.rx.items(cellIdentifier: tableViewCellIdentifier)) { _, model, cell in
-                cell.textLabel?.text = model.name
-//                cell.detailTextLabel?.text = model.subtitle
-//                cell.imageView?.image = model.image
-//                cell.selectionStyle = .none
+                guard let cell = cell as? HolidayTableViewCell else {
+                    return
+                }
+                cell.randomImageView.sd_setImage(with: model.imageURL, placeholderImage: nil, options: [.refreshCached])
+                cell.nameLabel.text = model.holiday.name
             }
             .disposed(by: disposeBag)
     }

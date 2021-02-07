@@ -41,6 +41,8 @@ public struct PicsumApi: BaseTargetType {
         case .getImages(let page, let limit):
             parameters["page"] = page
             parameters["limit"] = limit
+        case .getRandomImage:
+            parameters["random"] = Int.random(in: 0..<Int.max)
         default:
             break
         }
@@ -49,10 +51,8 @@ public struct PicsumApi: BaseTargetType {
     
     public var task: Task {
         switch action {
-        case .getImages:
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         default:
-            return .requestPlain
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
     

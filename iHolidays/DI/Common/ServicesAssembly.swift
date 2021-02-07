@@ -15,7 +15,14 @@ class ServicesAssembly: Assembly {
             HolidaysApiServiceImpl(
                 baseURL: Config.holidaysApiBaseURL,
                 apiKey: Config.holidaysApiKey,
-                provider: .init()
+                provider: .init(stubClosure: MoyaProvider.delayedStub(0.1))
+            )
+        }
+        
+        container.register(PicsumApiService.self) { _ in
+            PicsumApiServiceImpl(
+                baseURL: Config.picsumApiBaseURL,
+                provider: .init(stubClosure: MoyaProvider.delayedStub(0.1))
             )
         }
     }

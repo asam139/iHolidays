@@ -13,5 +13,5 @@ class Config {
     @BundleInfo(key: "HOLIDAYS_API_KEY") static var holidaysApiKey: String
     
     // MARK: - Picsum Api
-    @BundleInfo(key: "PICSUM_API_BASE_URL") static var picsumApiBaseURL: URL
+    @BundleInfoURL(key: "PICSUM_API_BASE_URL") static var picsumApiBaseURL: URL
 }

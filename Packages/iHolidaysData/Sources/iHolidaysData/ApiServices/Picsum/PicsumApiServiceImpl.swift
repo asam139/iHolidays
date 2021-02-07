@@ -26,12 +26,14 @@ public class PicsumApiServiceImpl: PicsumApiService {
     
     public func getImageURLBy(id: String, width: UInt, height: UInt) -> Single<URL> {
         let action = createAction(.getImage(id: id, width: width, height: height))
-        return .just(URL(target: action))
+        let url = try! MoyaProvider.defaultEndpointMapping(for: action).urlRequest().url!.absoluteURL
+        return .just(url)
     }
     
     public func getRandomImageURL(width: UInt, height: UInt) -> Single<URL> {
         let action = createAction(.getRandomImage(width: width, height: height))
-        return .just(URL(target: action))
+        let url = try! MoyaProvider.defaultEndpointMapping(for: action).urlRequest().url!.absoluteURL
+        return .just(url)
     }
 }
 

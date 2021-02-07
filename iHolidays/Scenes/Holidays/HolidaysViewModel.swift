@@ -26,7 +26,7 @@ class HolidaysViewModel: ViewModelType {
     }()
     
     // MARK: Outputs
-    private lazy var holidaysSub = PublishSubject<[Holiday]>()
+    private lazy var holidaysSub = PublishSubject<[HolidayWithImage]>()
     
     lazy var output: HolidaysViewModelOutput = {
         transformInput()
@@ -36,7 +36,16 @@ class HolidaysViewModel: ViewModelType {
     func transformInput() -> HolidaysViewModelOutput {
         
         fetchHolidays
-            .flatMap { [userUseCase] in userUseCase.getHolidays(country: "ES", year: 2020) }
+            .flatMap { [fetchHolidaysUseCase] in fetchHolidaysUseCase.getHolidays(country: "ES", year: 2020) }
+            .flatMap { [fetchPicsumUseCase] array -> Single<[HolidayWithImage]> in
+                let array = array.map {
+                    Observable.combineLatest(
+                        Observable.just($0),
+                        fetchPicsumUseCase.getRandomImage().asObservable()
+                    ).map { HolidayWithImage(holiday: $0.0, imageURL: $0.1) }
+                }
+                return Observable.from(array).merge().toArray()
+            }
             .bind(to: holidaysSub)
             .disposed(by: disposeBag)
         
@@ -50,13 +59,15 @@ class HolidaysViewModel: ViewModelType {
     // MARK: Stored properties
 
     private let router: UnownedRouter<HolidaysRoute>
-    private let userUseCase: UserUseCase
+    private let fetchHolidaysUseCase: FetchHolidaysUseCase
+    private let fetchPicsumUseCase: FetchPicsumUseCase
 
     // MARK: Initialization
 
     init(router: UnownedRouter<HolidaysRoute>, resolver: Resolver) {
         self.router = router
-        self.userUseCase = resolver.resolve(UserUseCase.self)!
+        self.fetchHolidaysUseCase = resolver.resolve(FetchHolidaysUseCase.self)!
+        self.fetchPicsumUseCase = resolver.resolve(FetchPicsumUseCase.self)!
     }
     
     deinit {

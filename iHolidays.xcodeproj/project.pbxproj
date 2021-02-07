@@ -18,6 +18,7 @@
 		86A696B625BF549B0067C25B /* HolidayViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A696B525BF549B0067C25B /* HolidayViewModelAssembly.swift */; };
 		86AFC5D125CF17DE0074437E /* BundleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC5D025CF17DE0074437E /* BundleInfo.swift */; };
 		86AFC5DC25CF1D280074437E /* BundleInfoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC5DB25CF1D280074437E /* BundleInfoURL.swift */; };
+		86AFC5E525D056200074437E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 86AFC5E425D056200074437E /* SDWebImage */; };
 		86B8DA5725C06E19005E7669 /* iHolidaysData in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5625C06E19005E7669 /* iHolidaysData */; };
 		86B8DA5925C06E19005E7669 /* iHolidaysDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5825C06E19005E7669 /* iHolidaysDomain */; };
 		86B8DA5B25C06E19005E7669 /* XCoordinatorRx in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5A25C06E19005E7669 /* XCoordinatorRx */; };
@@ -132,6 +133,7 @@
 				86B8DA5725C06E19005E7669 /* iHolidaysData in Frameworks */,
 				86B8DA5F25C06E19005E7669 /* Swinject in Frameworks */,
 				86B8DA5925C06E19005E7669 /* iHolidaysDomain in Frameworks */,
+				86AFC5E525D056200074437E /* SDWebImage in Frameworks */,
 				86B8DA5D25C06E19005E7669 /* RxMoya in Frameworks */,
 				86B8DA5B25C06E19005E7669 /* XCoordinatorRx in Frameworks */,
 				4FDDE465D7E032B05ABDB17B /* Pods_iHolidays.framework in Frameworks */,
@@ -409,6 +411,7 @@
 				86B8DA5A25C06E19005E7669 /* XCoordinatorRx */,
 				86B8DA5C25C06E19005E7669 /* RxMoya */,
 				86B8DA5E25C06E19005E7669 /* Swinject */,
+				86AFC5E425D056200074437E /* SDWebImage */,
 			);
 			productName = iHolidays;
 			productReference = 86CFD13325BDFD51006A53E6 /* iHolidays.app */;
@@ -488,6 +491,7 @@
 				86CFD16925BDFDA1006A53E6 /* XCRemoteSwiftPackageReference "XCoordinator" */,
 				86CFD17E25BE0008006A53E6 /* XCRemoteSwiftPackageReference "Moya" */,
 				86ED9B0625BF1100001DE8B0 /* XCRemoteSwiftPackageReference "Swinject" */,
+				86AFC5E325D056200074437E /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 86CFD13425BDFD51006A53E6 /* Products */;
 			projectDirPath = "";
@@ -1016,6 +1020,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		86AFC5E325D056200074437E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.4;
+			};
+		};
 		86CFD16925BDFDA1006A53E6 /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quickbirdstudios/XCoordinator";
@@ -1043,6 +1055,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		86AFC5E425D056200074437E /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86AFC5E325D056200074437E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		86B8DA5625C06E19005E7669 /* iHolidaysData */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = iHolidaysData;

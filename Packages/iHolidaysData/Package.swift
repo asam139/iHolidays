@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "iHolidaysData",
-            targets: ["iHolidaysData"]),
+            targets: ["iHolidaysData"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -33,6 +33,6 @@ let package = Package(
             ],
             resources: [.process("Stubs")]
         ),
-        .testTarget(name: "iHolidaysDataTests", dependencies: ["iHolidaysData"]),
+        .testTarget(name: "iHolidaysDataTests", dependencies: ["iHolidaysData"])
     ]
 )

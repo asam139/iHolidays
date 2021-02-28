@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Saúl Moreno Abril on 6/2/21.
 //
@@ -13,7 +13,7 @@ public struct PicsumImageDTO: Decodable {
     public let author: String?
     public let width: Int?
     public let height: Int?
-    
+
     public init(
         id: String?,
         author: String?,
@@ -25,7 +25,7 @@ public struct PicsumImageDTO: Decodable {
         self.width = width
         self.height = height
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case author
@@ -44,6 +44,3 @@ extension PicsumImageDTO {
         )
     }
 }
-
-
-

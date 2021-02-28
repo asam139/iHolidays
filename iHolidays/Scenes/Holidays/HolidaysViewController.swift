@@ -5,17 +5,17 @@
 //  Created by Saúl Moreno Abril on 24/1/21.
 //
 
-import UIKit
+import iHolidaysDomain
 import RxSwift
 import SDWebImage
-import iHolidaysDomain
+import UIKit
 
 class HolidaysViewController: BindableViewController<HolidaysViewModel> {
     // MARK: Views
     @IBOutlet private var tableView: UITableView!
 
     // MARK: Stored properties
-    
+
     private let tableViewCellIdentifier = String(describing: HolidayTableViewCell.self)
 
     // MARK: Overrides
@@ -26,12 +26,12 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
         tableView.register(HolidayTableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
         tableView.rowHeight = 44
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetch()
     }
-    
+
     deinit {
         print("Deinit \(self)")
     }
@@ -40,13 +40,13 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
 
     override func bindViewModel() {
         super.bindViewModel()
-        
+
         tableView.rx.modelSelected(HolidayWithImage.self)
             .asDriver()
             .map { $0.holiday }
             .drive(viewModel.input.selectHoliday)
             .disposed(by: disposeBag)
-        
+
         viewModel.output.holidays
             .asDriver(onErrorJustReturn: [])
             .drive(tableView.rx.items(cellIdentifier: tableViewCellIdentifier)) { _, model, cell in
@@ -58,7 +58,7 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
             }
             .disposed(by: disposeBag)
     }
-    
+
     private func fetch() {
         viewModel.input.fetchHolidaysTrigger.onNext(())
     }

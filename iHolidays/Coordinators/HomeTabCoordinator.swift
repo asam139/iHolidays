@@ -5,21 +5,19 @@
 //  Created by Saúl Moreno Abril on 24/1/21.
 //
 
+import Swinject
 import UIKit
 import XCoordinator
-import XCoordinatorRx
-import Swinject
 
 enum HomeRoute: Route {
     case holidays
 }
 
 class HomeTabCoordinator: TabBarCoordinator<HomeRoute> {
-
     // MARK: Stored properties
 
     private let holidaysRouter: StrongRouter<HolidaysRoute>
-    //private let userListRouter: StrongRouter<UserListRoute>
+    // private let userListRouter: StrongRouter<UserListRoute>
 
     // MARK: Initialization
 
@@ -44,5 +42,4 @@ class HomeTabCoordinator: TabBarCoordinator<HomeRoute> {
             return .select(holidaysRouter)
         }
     }
-
 }

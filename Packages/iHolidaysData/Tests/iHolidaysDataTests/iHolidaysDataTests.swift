@@ -10,6 +10,6 @@ final class iHolidaysDataTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testExample", testExample)
     ]
 }

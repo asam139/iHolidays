@@ -1,6 +1,6 @@
 //
 //  PicsumApi.swift
-//  
+//
 //
 //  Created by Saúl Moreno Abril on 6/2/21.
 //
@@ -11,7 +11,7 @@ import Moya
 public struct PicsumApi: BaseTargetType {
     public let mainBaseURL: URL
     public let action: Action
-    
+
     public enum Action {
         case getImages(page: UInt, limit: UInt)
         case getImage(id: String, width: UInt, height: UInt)
@@ -19,7 +19,7 @@ public struct PicsumApi: BaseTargetType {
     }
 
     public var baseURL: URL { mainBaseURL }
- 
+
     public var path: String {
         switch action {
         case .getImages:
@@ -30,11 +30,11 @@ public struct PicsumApi: BaseTargetType {
             return "/\(width)/\(height)"
         }
     }
-    
+
     public var method: Moya.Method {
         return .get
     }
-    
+
     private var parameters: [String: Any] {
         var parameters = [String: Any]()
         switch action {
@@ -48,14 +48,14 @@ public struct PicsumApi: BaseTargetType {
         }
         return parameters
     }
-    
+
     public var task: Task {
         switch action {
         default:
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
-    
+
     public var sampleData: Data {
         let name: String
         let withExtension: String
@@ -67,14 +67,14 @@ public struct PicsumApi: BaseTargetType {
             name = "randomImageStub"
             withExtension = "jpeg"
         }
-        
-        guard let url = Bundle.module.url(forResource: name, withExtension: withExtension),
+
+        guard let url = Bundle.own.url(forResource: name, withExtension: withExtension),
               let data = try? Data(contentsOf: url) else {
             return Data()
         }
 
         return data
     }
-    
-    public var headers: [String : String]? { nil }
+
+    public var headers: [String: String]? { nil }
 }

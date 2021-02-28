@@ -5,8 +5,8 @@
 //  Created by Saúl Moreno Abril on 24/1/21.
 //
 
-import RxSwift
 import iHolidaysDomain
+import RxSwift
 
 struct HolidayViewModelInput {
     var dismissTrigger: AnyObserver<Void>
@@ -15,4 +15,3 @@ struct HolidayViewModelInput {
 struct HolidayViewModelOutput {
     let holiday: Observable<Holiday>
 }
-

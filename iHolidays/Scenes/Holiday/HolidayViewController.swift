@@ -5,9 +5,9 @@
 //  Created by Saúl Moreno Abril on 24/1/21.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 class HolidayViewController: BindableViewController<HolidayViewModel> {
     // MARK: Views
@@ -16,18 +16,17 @@ class HolidayViewController: BindableViewController<HolidayViewModel> {
 
     // MARK: Stored properties
 
-
     // MARK: Overrides
 
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
+
     deinit {
         print("Deinit \(self)")
     }

@@ -9,7 +9,7 @@ import Swinject
 
 class HolidayViewModelAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(HolidayViewModel.self) { r, holiday, router in
+        container.register(HolidayViewModel.self) { _, holiday, router in
             HolidayViewModel(holiday: holiday, router: router)
         }
     }

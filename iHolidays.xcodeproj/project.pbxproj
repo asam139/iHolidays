@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,12 +18,6 @@
 		86A696B625BF549B0067C25B /* HolidayViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A696B525BF549B0067C25B /* HolidayViewModelAssembly.swift */; };
 		86AFC5D125CF17DE0074437E /* BundleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC5D025CF17DE0074437E /* BundleInfo.swift */; };
 		86AFC5DC25CF1D280074437E /* BundleInfoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC5DB25CF1D280074437E /* BundleInfoURL.swift */; };
-		86AFC5E525D056200074437E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 86AFC5E425D056200074437E /* SDWebImage */; };
-		86B8DA5725C06E19005E7669 /* iHolidaysData in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5625C06E19005E7669 /* iHolidaysData */; };
-		86B8DA5925C06E19005E7669 /* iHolidaysDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5825C06E19005E7669 /* iHolidaysDomain */; };
-		86B8DA5B25C06E19005E7669 /* XCoordinatorRx in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5A25C06E19005E7669 /* XCoordinatorRx */; };
-		86B8DA5D25C06E19005E7669 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5C25C06E19005E7669 /* RxMoya */; };
-		86B8DA5F25C06E19005E7669 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 86B8DA5E25C06E19005E7669 /* Swinject */; };
 		86CFD13725BDFD51006A53E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13625BDFD51006A53E6 /* AppDelegate.swift */; };
 		86CFD13925BDFD51006A53E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13825BDFD51006A53E6 /* SceneDelegate.swift */; };
 		86CFD13B25BDFD51006A53E6 /* HolidaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13A25BDFD51006A53E6 /* HolidaysViewController.swift */; };
@@ -110,8 +104,6 @@
 		86CFD1E325BE1AE8006A53E6 /* HolidayViewModalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewModalTypes.swift; sourceTree = "<group>"; };
 		86CFD1E825BE1AF0006A53E6 /* HolidayViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewModal.swift; sourceTree = "<group>"; };
 		86CFD1ED25BE1E81006A53E6 /* HolidayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCoordinator.swift; sourceTree = "<group>"; };
-		86ED9AF225BEF8EA001DE8B0 /* iHolidaysData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iHolidaysData; sourceTree = "<group>"; };
-		86ED9AFA25BEFC00001DE8B0 /* iHolidaysDomain */ = {isa = PBXFileReference; lastKnownFileType = folder; path = iHolidaysDomain; sourceTree = "<group>"; };
 		86ED9B1C25BF131A001DE8B0 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		86ED9B1D25BF1324001DE8B0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		86ED9B3C25BF13F4001DE8B0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -130,12 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86B8DA5725C06E19005E7669 /* iHolidaysData in Frameworks */,
-				86B8DA5F25C06E19005E7669 /* Swinject in Frameworks */,
-				86B8DA5925C06E19005E7669 /* iHolidaysDomain in Frameworks */,
-				86AFC5E525D056200074437E /* SDWebImage in Frameworks */,
-				86B8DA5D25C06E19005E7669 /* RxMoya in Frameworks */,
-				86B8DA5B25C06E19005E7669 /* XCoordinatorRx in Frameworks */,
 				4FDDE465D7E032B05ABDB17B /* Pods_iHolidays.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,12 +161,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		865C0BBF25C81244002BFCCD /* R.swift */ = {
+		865C0BBF25C81244002BFCCD /* R */ = {
 			isa = PBXGroup;
 			children = (
 				865C0BD825C815A5002BFCCD /* R.generated.swift */,
 			);
-			path = R.swift;
+			path = R;
 			sourceTree = "<group>";
 		};
 		868333B925BED04300F26976 /* Extensions */ = {
@@ -213,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				86CFD13525BDFD51006A53E6 /* iHolidays */,
-				86ED9AF625BEFBD5001DE8B0 /* Packages */,
 				86CFD14C25BDFD55006A53E6 /* iHolidaysTests */,
 				86CFD15725BDFD55006A53E6 /* iHolidaysUITests */,
 				86CFD13425BDFD51006A53E6 /* Products */,
@@ -238,7 +223,7 @@
 				86CFD13625BDFD51006A53E6 /* AppDelegate.swift */,
 				86CFD13825BDFD51006A53E6 /* SceneDelegate.swift */,
 				86ED9B1B25BF12F3001DE8B0 /* Config */,
-				865C0BBF25C81244002BFCCD /* R.swift */,
+				865C0BBF25C81244002BFCCD /* R */,
 				86ED9B0925BF1102001DE8B0 /* DI */,
 				86CFD18A25BE027E006A53E6 /* MVVM */,
 				86CFD1B525BE140C006A53E6 /* Coordinators */,
@@ -323,15 +308,6 @@
 			path = Holiday;
 			sourceTree = "<group>";
 		};
-		86ED9AF625BEFBD5001DE8B0 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				86ED9AFA25BEFC00001DE8B0 /* iHolidaysDomain */,
-				86ED9AF225BEF8EA001DE8B0 /* iHolidaysData */,
-			);
-			path = Packages;
-			sourceTree = "<group>";
-		};
 		86ED9B0925BF1102001DE8B0 /* DI */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,7 +370,8 @@
 			buildConfigurationList = 86CFD15D25BDFD55006A53E6 /* Build configuration list for PBXNativeTarget "iHolidays" */;
 			buildPhases = (
 				8F54ADBC54C9C60B18236EAD /* [CP] Check Pods Manifest.lock */,
-				865C0BCE25C81354002BFCCD /* R.swift */,
+				C7D8940B8E9F8D780C46A226 /* [CP-User] Lint */,
+				A2AD07BBB14350775E521A57 /* [CP-User] R.swift */,
 				86CFD12F25BDFD51006A53E6 /* Sources */,
 				86CFD13025BDFD51006A53E6 /* Frameworks */,
 				86CFD13125BDFD51006A53E6 /* Resources */,
@@ -406,12 +383,6 @@
 			);
 			name = iHolidays;
 			packageProductDependencies = (
-				86B8DA5625C06E19005E7669 /* iHolidaysData */,
-				86B8DA5825C06E19005E7669 /* iHolidaysDomain */,
-				86B8DA5A25C06E19005E7669 /* XCoordinatorRx */,
-				86B8DA5C25C06E19005E7669 /* RxMoya */,
-				86B8DA5E25C06E19005E7669 /* Swinject */,
-				86AFC5E425D056200074437E /* SDWebImage */,
 			);
 			productName = iHolidays;
 			productReference = 86CFD13325BDFD51006A53E6 /* iHolidays.app */;
@@ -488,10 +459,6 @@
 			);
 			mainGroup = 86CFD12A25BDFD51006A53E6;
 			packageReferences = (
-				86CFD16925BDFDA1006A53E6 /* XCRemoteSwiftPackageReference "XCoordinator" */,
-				86CFD17E25BE0008006A53E6 /* XCRemoteSwiftPackageReference "Moya" */,
-				86ED9B0625BF1100001DE8B0 /* XCRemoteSwiftPackageReference "Swinject" */,
-				86AFC5E325D056200074437E /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 86CFD13425BDFD51006A53E6 /* Products */;
 			projectDirPath = "";
@@ -611,26 +578,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iHolidays/Pods-iHolidays-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		865C0BCE25C81354002BFCCD /* R.swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
-			);
-			name = R.swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/iHolidays/R.swift/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/iHolidays/R.swift/R.generated.swift\"\n";
-		};
 		8F54ADBC54C9C60B18236EAD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -652,6 +599,32 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A2AD07BBB14350775E521A57 /* [CP-User] R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "[CP-User] R.swift";
+			outputPaths = (
+				$SRCROOT/iHolidays/R/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/iHolidays/R/R.generated.swift\"";
+		};
+		C7D8940B8E9F8D780C46A226 /* [CP-User] Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Lint";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect --format";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1018,72 +991,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		86AFC5E325D056200074437E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.10.4;
-			};
-		};
-		86CFD16925BDFDA1006A53E6 /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/quickbirdstudios/XCoordinator";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.7;
-			};
-		};
-		86CFD17E25BE0008006A53E6 /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 14.0.0;
-			};
-		};
-		86ED9B0625BF1100001DE8B0 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.7.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		86AFC5E425D056200074437E /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 86AFC5E325D056200074437E /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-		86B8DA5625C06E19005E7669 /* iHolidaysData */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = iHolidaysData;
-		};
-		86B8DA5825C06E19005E7669 /* iHolidaysDomain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = iHolidaysDomain;
-		};
-		86B8DA5A25C06E19005E7669 /* XCoordinatorRx */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 86CFD16925BDFDA1006A53E6 /* XCRemoteSwiftPackageReference "XCoordinator" */;
-			productName = XCoordinatorRx;
-		};
-		86B8DA5C25C06E19005E7669 /* RxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 86CFD17E25BE0008006A53E6 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = RxMoya;
-		};
-		86B8DA5E25C06E19005E7669 /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 86ED9B0625BF1100001DE8B0 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86CFD12B25BDFD51006A53E6 /* Project object */;
 }

@@ -7,14 +7,13 @@
 
 import Swinject
 
-
 class CommonAssembly: Assembly {
     func assemble(container: Container) {
         // i.e
         /*
-        container.register(LoggingService.self) {
-            _ in LoggingService()
-        }
-        */
+         container.register(LoggingService.self) {
+         _ in LoggingService()
+         }
+         */
     }
 }

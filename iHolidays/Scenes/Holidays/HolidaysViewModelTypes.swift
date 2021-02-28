@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import RxSwift
 import iHolidaysDomain
+import RxSwift
 
 struct HolidaysViewModelInput {
     var fetchHolidaysTrigger: AnyObserver<Void>

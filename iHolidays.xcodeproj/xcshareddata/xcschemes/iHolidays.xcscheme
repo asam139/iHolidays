@@ -48,6 +48,34 @@
                ReferencedContainer = "container:iHolidays.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "15934D2FCDA2BC8D0D402491A8A24718"
+               BuildableName = "iHolidaysData-Unit-Tests.xctest"
+               BlueprintName = "iHolidaysData-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7A10D3ABB8937A3ABB2CC9F785EECD76"
+               BuildableName = "iHolidaysDomain-Unit-Tests.xctest"
+               BlueprintName = "iHolidaysDomain-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -67,17 +95,17 @@
          </BuildableReference>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "iHolidaysDomain"
-            BuildableName = "iHolidaysDomain"
-            BlueprintName = "iHolidaysDomain"
-            ReferencedContainer = "container:Packages/iHolidaysDomain">
+            BlueprintIdentifier = "358477E92FD2DBF800F5C0F4A0898E7D"
+            BuildableName = "iHolidaysData.framework"
+            BlueprintName = "iHolidaysData"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "iHolidaysData"
-            BuildableName = "iHolidaysData"
-            BlueprintName = "iHolidaysData"
-            ReferencedContainer = "container:Packages/iHolidaysData">
+            BlueprintIdentifier = "BF7B169A637A5FD3F53D5324753C98DC"
+            BuildableName = "iHolidaysDomain.framework"
+            BlueprintName = "iHolidaysDomain"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -105,20 +133,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "iHolidaysDataTests"
-               BuildableName = "iHolidaysDataTests"
-               BlueprintName = "iHolidaysDataTests"
-               ReferencedContainer = "container:Packages/iHolidaysData">
+               BlueprintIdentifier = "15934D2FCDA2BC8D0D402491A8A24718"
+               BuildableName = "iHolidaysData-Unit-Tests.xctest"
+               BlueprintName = "iHolidaysData-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "iHolidaysDomainTests"
-               BuildableName = "iHolidaysDomainTests"
-               BlueprintName = "iHolidaysDomainTests"
-               ReferencedContainer = "container:Packages/iHolidaysDomain">
+               BlueprintIdentifier = "7A10D3ABB8937A3ABB2CC9F785EECD76"
+               BuildableName = "iHolidaysDomain-Unit-Tests.xctest"
+               BlueprintName = "iHolidaysDomain-Unit-Tests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

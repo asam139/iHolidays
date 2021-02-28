@@ -1,0 +1,7 @@
+sources:
+  - Sources/iHolidaysDomain
+  - Tests
+templates:
+  - Stencils
+output:
+  Tests/iHolidaysDomainTests/Generated

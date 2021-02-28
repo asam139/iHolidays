@@ -15,7 +15,7 @@ extension Assembler {
             ServicesAssembly(),
             RepositoriesAssembly(),
             UseCasesAssembly(),
-            
+
             HolidaysViewModelAssembly(),
             HolidayViewModelAssembly()
         ], container: container)

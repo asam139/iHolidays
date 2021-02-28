@@ -11,7 +11,7 @@ import iHolidaysDomain
 struct HolidayResponseDTO: Decodable {
     let status: Int?
     let holidays: [HolidayDTO]?
-    
+
     enum CodingKeys: String, CodingKey {
         case status
         case holidays

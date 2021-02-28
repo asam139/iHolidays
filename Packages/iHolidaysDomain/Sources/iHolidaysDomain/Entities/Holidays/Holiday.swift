@@ -14,7 +14,7 @@ public struct Holiday {
     public let observedDate: Date
     public let isPublic: Bool
     public let countryCode: String
-    
+
     public init(
         id: String,
         name: String,

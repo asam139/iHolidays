@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import RxSwift
-import XCoordinator
-import Swinject
 import iHolidaysDomain
+import RxSwift
+import Swinject
+import XCoordinator
 
 class HolidaysViewModel: ViewModelType {
     let disposeBag = DisposeBag()
@@ -17,22 +17,21 @@ class HolidaysViewModel: ViewModelType {
     // MARK: Inputs
     private lazy var fetchHolidays = PublishSubject<Void>()
     private lazy var selectHoliday = PublishSubject<Holiday>()
-    
+
     lazy var input: HolidaysViewModelInput = {
         HolidaysViewModelInput(
             fetchHolidaysTrigger: fetchHolidays.asObserver(),
             selectHoliday: selectHoliday.asObserver()
         )
     }()
-    
-    
+
     // MARK: Outputs
     private lazy var holidaysSub = PublishSubject<[HolidayWithImage]>()
-    
+
     lazy var output: HolidaysViewModelOutput = {
         transformInput()
     }()
-    
+
     // MARK: Transform
     func transformInput() -> HolidaysViewModelOutput {
         fetchHolidays
@@ -48,7 +47,7 @@ class HolidaysViewModel: ViewModelType {
             }
             .bind(to: holidaysSub)
             .disposed(by: disposeBag)
-        
+
         selectHoliday
             .flatMap { [router] in router.rx.trigger(.holiday($0)) }
             .subscribe().disposed(by: disposeBag)
@@ -69,7 +68,7 @@ class HolidaysViewModel: ViewModelType {
         self.fetchHolidaysUseCase = resolver.resolve(FetchHolidaysUseCase.self)!
         self.fetchPicsumUseCase = resolver.resolve(FetchPicsumUseCase.self)!
     }
-    
+
     deinit {
         print("Deinit \(self)")
     }

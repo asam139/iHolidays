@@ -1,0 +1,7 @@
+sources:
+  - ../Sources/GoFitData
+  - Tests
+templates:
+  - Stencils
+output:
+  Tests/Generated

@@ -5,9 +5,9 @@
 //  Created by Saúl Moreno Abril on 25/1/21.
 //
 
-import Swinject
-import Moya
 import iHolidaysData
+import Moya
+import Swinject
 
 class ServicesAssembly: Assembly {
     func assemble(container: Container) {
@@ -18,7 +18,7 @@ class ServicesAssembly: Assembly {
                 provider: .init(stubClosure: MoyaProvider.delayedStub(0.1))
             )
         }
-        
+
         container.register(PicsumApiService.self) { _ in
             PicsumApiServiceImpl(
                 baseURL: Config.picsumApiBaseURL,

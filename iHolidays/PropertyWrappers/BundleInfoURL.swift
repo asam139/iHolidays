@@ -12,7 +12,7 @@ struct BundleInfoURL {
     let key: String
     let defaultValue: URL?
     private var bundle: Bundle = .main
-    
+
     init(key: String, defaultValue: URL? = nil) {
         self.key = key
         self.defaultValue = defaultValue
@@ -25,7 +25,7 @@ struct BundleInfoURL {
         }
         return url
     }
-    
+
     private var infoDictionary: [String: Any] {
         bundle.infoDictionary ?? [:]
     }

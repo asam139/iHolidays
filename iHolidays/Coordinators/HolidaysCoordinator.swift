@@ -5,11 +5,10 @@
 //  Created by Saúl Moreno Abril on 24/1/21.
 //
 
+import iHolidaysDomain
+import Swinject
 import UIKit
 import XCoordinator
-import XCoordinatorRx
-import Swinject
-import iHolidaysDomain
 
 enum HolidaysRoute: Route {
     case home
@@ -18,9 +17,9 @@ enum HolidaysRoute: Route {
 
 class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
     private let assembler: Assembler
-    
+
     // MARK: Initialization
-    
+
     init(rootViewController: UINavigationController, assembler: Assembler = Assembler.shared) {
         self.assembler = assembler
         super.init(rootViewController: rootViewController, initialRoute: nil)
@@ -28,7 +27,7 @@ class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
     }
 
     // MARK: Overrides
-    
+
     override func prepareTransition(for route: HolidaysRoute) -> NavigationTransition {
         switch route {
         case .home:
@@ -40,11 +39,10 @@ class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
             let coordinator = HolidayCoordinator(rootViewController: rootViewController, holiday: holiday, assembler: assembler)
             addChild(coordinator)
             return .none()
-            //return .present(coordinator, animation: .default)
+        // return .present(coordinator, animation: .default)
         }
     }
 
     // MARK: Actions
-
 
 }

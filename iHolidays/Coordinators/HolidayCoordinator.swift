@@ -5,10 +5,10 @@
 //  Created by Saúl Moreno Abril on 24/1/21.
 //
 
+import iHolidaysDomain
+import Swinject
 import UIKit
 import XCoordinator
-import Swinject
-import iHolidaysDomain
 
 enum HolidayRoute: Route {
     case home(Holiday)
@@ -16,7 +16,6 @@ enum HolidayRoute: Route {
 }
 
 class HolidayCoordinator: NavigationCoordinator<HolidayRoute> {
-    
     private let assembler: Assembler
 
     // MARK: Initialization

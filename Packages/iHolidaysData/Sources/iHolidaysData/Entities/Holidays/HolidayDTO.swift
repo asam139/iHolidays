@@ -15,7 +15,7 @@ public struct HolidayDTO: Decodable {
     public let observedDate: Date?
     public let isPublic: Bool?
     public let countryCode: String?
-    
+
     public init(
         id: String?,
         name: String?,
@@ -31,7 +31,7 @@ public struct HolidayDTO: Decodable {
         self.isPublic = isPublic
         self.countryCode = countryCode
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name

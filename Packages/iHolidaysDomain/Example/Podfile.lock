@@ -1,0 +1,38 @@
+PODS:
+  - iHolidaysDomain (0.1.0):
+    - RxSwift (~> 5.1.1)
+  - iHolidaysDomain/Tests (0.1.0):
+    - Nimble (~> 9.0.0)
+    - Quick (~> 3.0.0)
+    - RxSwift (~> 5.1.1)
+  - Nimble (9.0.0)
+  - Quick (3.0.0)
+  - RxSwift (5.1.1)
+  - SwiftLint (0.42.0)
+
+DEPENDENCIES:
+  - iHolidaysDomain (from `../`)
+  - iHolidaysDomain/Tests (from `../`)
+  - SwiftLint (~> 0.42.0)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+    - RxSwift
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  iHolidaysDomain:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  iHolidaysDomain: c9b0e6bde2697596624eb6f7b4af8cc024ff4337
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+
+PODFILE CHECKSUM: 84202585513a2065f30933f1bdb9e9d8d9f60080
+
+COCOAPODS: 1.10.1

@@ -39,6 +39,27 @@ MVVM guides us how to distribute responsibilities between classes in a GUI appli
 
 'Proper' MVVM assumes at least a moderately complex application, which deals with data it gets from "somewhere". It may get the data from a database, a file or a web service.
 
+## Organization
+
+The project is organized in the main app and two packages for domain and data. Both packages supports Cocoapods and SPM for the integration. 
+
+ * iHoliday (App)
+ * Packages:
+    * iHolidayDomain (100% code coverage)
+    * iHolidayData (100% code coverage)
+
+Although recently the testing targets have integration with the tool **Sourcery** which it needs to be integrated addding scripts in the pipeline of the build so by now SPM is not compatible.
+
+### Sourcery
+
+Sourcery is a **meta-programming** tool for Swift to stop writing boilerplate code.
+
+In this project is used to create the mock from protocols with the **AutoMockable** stencil. Of this way the tests are more cleaner and simple with only the real testing code.
+
+### SwiftLint
+
+All the code has configurated SwiftLint. A tool to enforce Swift **style** and **conventions**, loosely based on the now archived GitHub Swift Style Guide. SwiftLint enforces the style guide rules that are generally accepted by the Swift community.
+
 ## Frameworks
 
 In this section it defends the reason to use each framework installed in the project.
@@ -58,7 +79,7 @@ Conversely the downsides are mainly two:
 
 Finally, to sum, reactive programming help you to write better, **cleaner code** and create components that can be **reused** in a **robust** codebase that can evolve. So the  disadvantages are justified. 
 
-### Swinject
+### Moya
 
 Swinject is framework to manage the DI (Dependency Injection) so the best way to justify it it is explaining the reason to use DI.
 

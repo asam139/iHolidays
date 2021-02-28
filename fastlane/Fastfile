@@ -1,0 +1,55 @@
+fastlane_require 'dotenv'
+default_platform(:ios)
+
+before_all do
+  Dotenv.overload('.env.secret', '.env')
+end
+
+platform :ios do
+  desc "Runs all the unit and ui tests"
+  lane :test do
+    workspace = ENV['WORKSPACE']
+    scheme = ENV['SCHEME']
+    no_ci = !is_ci
+
+    cocoapods(
+      podfile: "./Podfile",
+      repo_update: false
+    )
+    
+    scan(
+      workspace: workspace,
+      scheme: scheme,
+      skip_slack: no_ci
+    )
+    
+    if no_ci
+      check_xcov
+    end
+  end
+
+  def check_xcov()
+    workspace = ENV['WORKSPACE']
+    scheme = ENV['SCHEME']
+    no_ci = !is_ci
+    xcov(
+      workspace: workspace,
+      scheme: scheme,
+      output_directory: "fastlane/xcov_output",
+      minimum_coverage_percentage: 50.0,
+      skip_slack: no_ci
+    )
+  end
+
+  def alert(message, payload)
+    if is_ci
+      payload['Date'] = Time.new.to_s
+      slack(
+        message: message,
+        payload: payload,
+        default_payloads: []
+      )
+     end
+  end
+
+end

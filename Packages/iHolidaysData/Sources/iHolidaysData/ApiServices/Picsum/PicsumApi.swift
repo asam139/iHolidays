@@ -63,7 +63,8 @@ public struct PicsumApi: BaseTargetType {
         case .getImages:
             name = "imagesStub"
             withExtension = "json"
-        default:
+        case .getImage,
+             .getRandomImage:
             name = "randomImageStub"
             withExtension = "jpeg"
         }

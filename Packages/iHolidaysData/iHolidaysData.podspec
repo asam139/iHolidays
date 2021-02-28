@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Sources/iHolidaysData/**/*.{h,m,swift}'
   s.resource_bundles = {
-    'iHolidaysData_iHolidaysData' => 'Sources/iHolidaysDomain/Resources/**/*.{xcdatamodeld,storyboard,xib,png,json,jpg,imageset,xcassets}'
+    'iHolidaysData_iHolidaysData' => 'Sources/iHolidaysData/Resources/**/*.{xcdatamodeld,storyboard,xib,png,json,jpg,imageset,xcassets}'
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

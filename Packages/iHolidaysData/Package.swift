@@ -31,7 +31,7 @@ let package = Package(
                 .product(name: "RxCocoa", package: "RxSwift"),
                 .product(name: "RxMoya", package: "Moya")
             ],
-            resources: [.process("Stubs")]
+            resources: [.process("Resources/Stubs")]
         ),
         .testTarget(name: "iHolidaysDataTests", dependencies: ["iHolidaysData"])
     ]

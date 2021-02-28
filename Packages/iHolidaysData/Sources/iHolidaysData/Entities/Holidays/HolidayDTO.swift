@@ -50,7 +50,7 @@ extension HolidayDTO {
             date: date ?? Date(),
             observedDate: observedDate ?? Date(),
             isPublic: isPublic ?? true,
-            countryCode: countryCode ?? "ES"
+            countryCode: countryCode ?? ""
         )
     }
 }

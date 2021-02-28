@@ -17,7 +17,6 @@ class HomeTabCoordinator: TabBarCoordinator<HomeRoute> {
     // MARK: Stored properties
 
     private let holidaysRouter: StrongRouter<HolidaysRoute>
-    // private let userListRouter: StrongRouter<UserListRoute>
 
     // MARK: Initialization
 

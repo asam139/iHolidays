@@ -11,4 +11,3 @@ import RxSwift
 public protocol FetchHolidaysUseCase {
     func getHolidays(country: String, year: UInt) -> Single<[Holiday]>
 }
-

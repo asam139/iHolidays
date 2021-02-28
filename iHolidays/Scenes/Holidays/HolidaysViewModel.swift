@@ -25,6 +25,7 @@ class HolidaysViewModel: ViewModelType {
         )
     }()
     
+    
     // MARK: Outputs
     private lazy var holidaysSub = PublishSubject<[HolidayWithImage]>()
     
@@ -34,7 +35,6 @@ class HolidaysViewModel: ViewModelType {
     
     // MARK: Transform
     func transformInput() -> HolidaysViewModelOutput {
-        
         fetchHolidays
             .flatMap { [fetchHolidaysUseCase] in fetchHolidaysUseCase.getHolidays(country: "ES", year: 2020) }
             .flatMap { [fetchPicsumUseCase] array -> Single<[HolidayWithImage]> in

@@ -20,14 +20,107 @@
                ReferencedContainer = "container:iHolidays.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "86CFD14825BDFD55006A53E6"
+               BuildableName = "iHolidaysTests.xctest"
+               BlueprintName = "iHolidaysTests"
+               ReferencedContainer = "container:iHolidays.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "86CFD15325BDFD55006A53E6"
+               BuildableName = "iHolidaysUITests.xctest"
+               BlueprintName = "iHolidaysUITests"
+               ReferencedContainer = "container:iHolidays.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "86CFD13225BDFD51006A53E6"
+            BuildableName = "iHolidays.app"
+            BlueprintName = "iHolidays"
+            ReferencedContainer = "container:iHolidays.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "iHolidaysDomain"
+            BuildableName = "iHolidaysDomain"
+            BlueprintName = "iHolidaysDomain"
+            ReferencedContainer = "container:Packages/iHolidaysDomain">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "iHolidaysData"
+            BuildableName = "iHolidaysData"
+            BlueprintName = "iHolidaysData"
+            ReferencedContainer = "container:Packages/iHolidaysData">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "86CFD14825BDFD55006A53E6"
+               BuildableName = "iHolidaysTests.xctest"
+               BlueprintName = "iHolidaysTests"
+               ReferencedContainer = "container:iHolidays.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "86CFD15325BDFD55006A53E6"
+               BuildableName = "iHolidaysUITests.xctest"
+               BlueprintName = "iHolidaysUITests"
+               ReferencedContainer = "container:iHolidays.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "iHolidaysDataTests"
+               BuildableName = "iHolidaysDataTests"
+               BlueprintName = "iHolidaysDataTests"
+               ReferencedContainer = "container:Packages/iHolidaysData">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "iHolidaysDomainTests"
+               BuildableName = "iHolidaysDomainTests"
+               BlueprintName = "iHolidaysDomainTests"
+               ReferencedContainer = "container:Packages/iHolidaysDomain">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

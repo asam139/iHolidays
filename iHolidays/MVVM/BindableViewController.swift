@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class BindableViewController<ViewModel>: UIViewController, BindableType {
     var viewModel: ViewModel!
+    let disposeBag = DisposeBag()
     
     func bindViewModel() {}
     

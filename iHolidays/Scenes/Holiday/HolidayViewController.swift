@@ -16,7 +16,6 @@ class HolidayViewController: BindableViewController<HolidayViewModel> {
 
     // MARK: Stored properties
 
-    private let disposeBag = DisposeBag()
 
     // MARK: Overrides
 

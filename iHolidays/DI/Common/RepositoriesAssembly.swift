@@ -22,5 +22,3 @@ class RepositoriesAssembly: Assembly {
         }
     }
 }
-
-

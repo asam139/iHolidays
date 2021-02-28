@@ -15,21 +15,21 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
     @IBOutlet private var tableView: UITableView!
 
     // MARK: Stored properties
-
-    private let disposeBag = DisposeBag()
+    
     private let tableViewCellIdentifier = String(describing: HolidayTableViewCell.self)
 
     // MARK: Overrides
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableView.register(HolidayTableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
         tableView.rowHeight = 44
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fecth()
+        fetch()
     }
     
     deinit {
@@ -59,8 +59,7 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
             .disposed(by: disposeBag)
     }
     
-    private func fecth() {
+    private func fetch() {
         viewModel.input.fetchHolidaysTrigger.onNext(())
     }
 }
-

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Holiday {
+public struct Holiday: Equatable {
     public let id: String
     public let name: String
     public let date: Date

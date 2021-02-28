@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct PicsumImage {
+public struct PicsumImage: Equatable {
     public let id: String
     public let author: String
     public let width: Int

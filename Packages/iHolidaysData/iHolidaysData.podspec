@@ -45,6 +45,9 @@ TODO: Add long description of the pod here.
     test_spec.source_files = 'Tests/iHolidaysDataTests/**/*.{h,m,swift}'
     test_spec.dependency 'Quick', '~> 3.0.0'
     test_spec.dependency 'Nimble', '~> 9.0.0'
+    test_spec.dependency 'RxTest', '~> 5.1'
+    test_spec.dependency 'RxBlocking', '~> 5.1'
+
     test_spec.script_phases = [
       { :name => 'Sourcery',
         :script => '${PODS_TARGET_SRCROOT}/Scripts/sourcery.sh',

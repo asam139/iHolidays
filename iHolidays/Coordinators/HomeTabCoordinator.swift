@@ -20,8 +20,8 @@ class HomeTabCoordinator: TabBarCoordinator<HomeRoute> {
 
     // MARK: Initialization
 
-    convenience init(assembler: Assembler = Assembler.shared) {
-        let holidaysCoordinator = HolidaysCoordinator(rootViewController: .init(), assembler: assembler)
+    convenience init(resolver: Resolver) {
+        let holidaysCoordinator = HolidaysCoordinator(rootViewController: .init(), resolver: resolver)
         holidaysCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
 
         self.init(holidaysRouter: holidaysCoordinator.strongRouter)

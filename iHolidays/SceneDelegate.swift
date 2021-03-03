@@ -5,11 +5,12 @@
 //  Created by Saúl Moreno Abril on 24/1/21.
 //
 
+import Swinject
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    private let router = HomeTabCoordinator().strongRouter
+    private let router = HomeTabCoordinator(resolver: Assembler.shared.resolver).strongRouter
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

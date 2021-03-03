@@ -16,12 +16,12 @@ enum HolidaysRoute: Route {
 }
 
 class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
-    private let assembler: Assembler
+    private let resolver: Resolver
 
     // MARK: Initialization
 
-    init(rootViewController: UINavigationController, assembler: Assembler = Assembler.shared) {
-        self.assembler = assembler
+    init(rootViewController: UINavigationController, resolver: Resolver) {
+        self.resolver = resolver
         super.init(rootViewController: rootViewController, initialRoute: nil)
         trigger(.home)
     }
@@ -32,11 +32,11 @@ class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
         switch route {
         case .home:
             let viewController = HolidaysViewController(nib: R.nib.holidaysViewController)
-            let viewModel = assembler.resolver.resolve(HolidaysViewModel.self, argument: unownedRouter)!
+            let viewModel = resolver.resolve(HolidaysViewModel.self, argument: unownedRouter)!
             viewController.bind(to: viewModel)
             return .push(viewController, animation: .navigation)
         case .holiday(let holiday):
-            let coordinator = HolidayCoordinator(rootViewController: rootViewController, holiday: holiday, assembler: assembler)
+            let coordinator = HolidayCoordinator(rootViewController: rootViewController, holiday: holiday, resolver: resolver)
             addChild(coordinator)
             return .none()
         // return .present(coordinator, animation: .default)

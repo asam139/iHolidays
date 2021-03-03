@@ -74,7 +74,7 @@ post_install do |installer|
   # Tests
   installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
-          if config.name == 'Dev'
+          if config.name == 'Debug'
               config.build_settings['ENABLE_TESTABILITY'] = 'YES'
           end
       end

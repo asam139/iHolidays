@@ -7,7 +7,7 @@ iOS App using MVVM-C with Clean Architecture
 
 ## Requirements
 
-- **iOS** 11.0+ / **macOS** 10.15+ / **Xcode** 12.0+
+- **iOS** 14.0+ / **macOS** 10.15+ / **Xcode** 12.0+
 - Swift 5.0+
 
 ## Setup
@@ -18,7 +18,7 @@ iOS App using MVVM-C with Clean Architecture
 
 ## Notes
 
-- In Xcode 13.3, Quick has a bug so the tests are not listed properly. To solve the project has enabled the paralell tests. This bug should be fixed in the version 4.0.1 of Quick.  
+- In Xcode 13.3, Quick has a bug so the tests are not listed properly. To solve the project has enabled the paralell tests. This bug should be fixed in the version 4.0.1 of Quick. [Issue](https://github.com/Quick/Quick/pull/1128)
 
 ## Architecture
 

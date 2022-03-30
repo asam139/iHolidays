@@ -28,7 +28,7 @@ class HolidayCoordinator: NavigationCoordinator<HolidayRoute> {
     override func prepareTransition(for route: HolidayRoute) -> NavigationTransition {
         switch route {
         case let .home(holiday):
-            let viewController = HolidayViewController(nib: R.nib.holidayViewController)
+            let viewController = HolidayViewController()
             let viewModel = resolver.resolve(HolidayViewModel.self, arguments: holiday, unownedRouter)!
             viewController.bind(to: viewModel)
             return .push(viewController, animation: .pushWithCurveEaseOut)

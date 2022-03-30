@@ -20,7 +20,6 @@ class HolidayTableViewCell: UITableViewCell {
         img.layer.cornerRadius = 5
         img.clipsToBounds = true
         img.tintColor = .secondaryLabel
-        img.translatesAutoresizingMaskIntoConstraints = false
         return img
     }()
 
@@ -28,7 +27,6 @@ class HolidayTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
         label.textColor = .label
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
@@ -64,18 +62,23 @@ class HolidayTableViewCell: UITableViewCell {
     }
 
     private func setUp() {
-        contentView.addSubview(randomImageView)
-        contentView.addSubview(nameLabel)
+        contentView.addSubviews(randomImageView, nameLabel)
 
-        randomImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
-        randomImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
-        randomImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
-        randomImageView.widthAnchor.constraint(equalTo: randomImageView.heightAnchor).isActive = true
+        randomImageView.anchor(
+            top: contentView.topAnchor,
+            leading: contentView.leadingAnchor,
+            padding: .init(side: 8)
+        )
+        randomImageView.alignY()
+        randomImageView.withWidthTo(randomImageView.heightAnchor)
 
-        nameLabel.leadingAnchor.constraint(equalTo: randomImageView.trailingAnchor, constant: 8).isActive = true
-        nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
-        nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        nameLabel.anchor(
+            top: contentView.topAnchor,
+            leading: randomImageView.trailingAnchor,
+            trailing: contentView.trailingAnchor,
+            padding: .init(side: 8)
+        )
+        nameLabel.alignY()
     }
 
     func update(model: Model) {

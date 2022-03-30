@@ -43,6 +43,11 @@
 		86ED9B6425BF3CD0001DE8B0 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B6325BF3CD0001DE8B0 /* RepositoriesAssembly.swift */; };
 		86ED9B6D25BF3D32001DE8B0 /* UseCasesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */; };
 		9C371F8D25EFB662006997C8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C371F8C25EFB662006997C8 /* R.generated.swift */; };
+		9C6D205527F48F3500F0E3E3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D204A27F48F3500F0E3E3 /* UIView+.swift */; };
+		9C6D205627F48F3500F0E3E3 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D204B27F48F3500F0E3E3 /* UIView+Layout.swift */; };
+		9C6D205727F48F3500F0E3E3 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D204D27F48F3500F0E3E3 /* UIStackView+.swift */; };
+		9C6D205827F48F3500F0E3E3 /* UIEdgeInsets+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D204F27F48F3500F0E3E3 /* UIEdgeInsets+.swift */; };
+		9C6D205927F48F3500F0E3E3 /* CGRect+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D205227F48F3500F0E3E3 /* CGRect+.swift */; };
 		D119EAB8B054AB4BAA770E2D /* Pods_iHolidaysTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A3CDD3C763A6E79001F906 /* Pods_iHolidaysTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +119,11 @@
 		88A6043821AD7C19C6EFEF34 /* Pods_iHolidays_iHolidaysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iHolidays_iHolidaysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C01997627F46E50009EDD75 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9C371F8C25EFB662006997C8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		9C6D204A27F48F3500F0E3E3 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		9C6D204B27F48F3500F0E3E3 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		9C6D204D27F48F3500F0E3E3 /* UIStackView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		9C6D204F27F48F3500F0E3E3 /* UIEdgeInsets+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+.swift"; sourceTree = "<group>"; };
+		9C6D205227F48F3500F0E3E3 /* CGRect+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+.swift"; sourceTree = "<group>"; };
 		CBBA7A40758EC1325A6C678B /* Pods-iHolidays.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays.release.xcconfig"; path = "Target Support Files/Pods-iHolidays/Pods-iHolidays.release.xcconfig"; sourceTree = "<group>"; };
 		F80D403E85EE11B46F55BFA7 /* Pods-iHolidays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays.debug.xcconfig"; path = "Target Support Files/Pods-iHolidays/Pods-iHolidays.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,7 +175,9 @@
 		868333B925BED04300F26976 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				868333BA25BED05200F26976 /* Transitions+.swift */,
+				9C6D205A27F48F5500F0E3E3 /* Transitions */,
+				9C6D205027F48F3500F0E3E3 /* CoreGraphics */,
+				9C6D204827F48F3500F0E3E3 /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +364,65 @@
 				9C371F8C25EFB662006997C8 /* R.generated.swift */,
 			);
 			path = R;
+			sourceTree = "<group>";
+		};
+		9C6D204827F48F3500F0E3E3 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9C6D204927F48F3500F0E3E3 /* UIView */,
+				9C6D204C27F48F3500F0E3E3 /* UIStackView */,
+				9C6D204E27F48F3500F0E3E3 /* UIEdgeInsets */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9C6D204927F48F3500F0E3E3 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				9C6D204A27F48F3500F0E3E3 /* UIView+.swift */,
+				9C6D204B27F48F3500F0E3E3 /* UIView+Layout.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		9C6D204C27F48F3500F0E3E3 /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				9C6D204D27F48F3500F0E3E3 /* UIStackView+.swift */,
+			);
+			path = UIStackView;
+			sourceTree = "<group>";
+		};
+		9C6D204E27F48F3500F0E3E3 /* UIEdgeInsets */ = {
+			isa = PBXGroup;
+			children = (
+				9C6D204F27F48F3500F0E3E3 /* UIEdgeInsets+.swift */,
+			);
+			path = UIEdgeInsets;
+			sourceTree = "<group>";
+		};
+		9C6D205027F48F3500F0E3E3 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				9C6D205127F48F3500F0E3E3 /* Rect */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		9C6D205127F48F3500F0E3E3 /* Rect */ = {
+			isa = PBXGroup;
+			children = (
+				9C6D205227F48F3500F0E3E3 /* CGRect+.swift */,
+			);
+			path = Rect;
+			sourceTree = "<group>";
+		};
+		9C6D205A27F48F5500F0E3E3 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				868333BA25BED05200F26976 /* Transitions+.swift */,
+			);
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 		E2BCA5CDF1F4D71936DBE6DB /* Frameworks */ = {
@@ -606,7 +677,7 @@
 			);
 			name = "[CP-User] R.swift";
 			outputPaths = (
-				"$SRCROOT/iHolidays/R/R.generated.swift",
+				$SRCROOT/iHolidays/R/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -645,13 +716,18 @@
 				86CFD17A25BDFE47006A53E6 /* HolidaysViewModel.swift in Sources */,
 				86A696B625BF549B0067C25B /* HolidayViewModelAssembly.swift in Sources */,
 				9C371F8D25EFB662006997C8 /* R.generated.swift in Sources */,
+				9C6D205627F48F3500F0E3E3 /* UIView+Layout.swift in Sources */,
+				9C6D205527F48F3500F0E3E3 /* UIView+.swift in Sources */,
+				9C6D205827F48F3500F0E3E3 /* UIEdgeInsets+.swift in Sources */,
 				86AFC5DC25CF1D280074437E /* BundleInfoURL.swift in Sources */,
+				9C6D205727F48F3500F0E3E3 /* UIStackView+.swift in Sources */,
 				86ED9B5525BF3972001DE8B0 /* Assembler.swift in Sources */,
 				86CFD1EE25BE1E81006A53E6 /* HolidayCoordinator.swift in Sources */,
 				86ED9B3D25BF13F4001DE8B0 /* Config.swift in Sources */,
 				86305DD525C019BF0091521B /* ViewModelType.swift in Sources */,
 				86ED9B5F25BF3AF2001DE8B0 /* ServicesAssembly.swift in Sources */,
 				86CFD17525BDFE23006A53E6 /* HolidaysViewModelTypes.swift in Sources */,
+				9C6D205927F48F3500F0E3E3 /* CGRect+.swift in Sources */,
 				86AFC5D125CF17DE0074437E /* BundleInfo.swift in Sources */,
 				86ED9B5A25BF3A54001DE8B0 /* CommonAssembly.swift in Sources */,
 				868333BB25BED05200F26976 /* Transitions+.swift in Sources */,

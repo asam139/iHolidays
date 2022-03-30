@@ -1,53 +1,53 @@
 PODS:
-  - Alamofire (5.4.1)
+  - Alamofire (5.5.0)
   - iHolidaysData (0.1.0):
     - iHolidaysDomain (~> 0.1.0)
-    - Moya/RxSwift (~> 14.0.0)
-    - RxSwift (~> 5.1.1)
+    - Moya/RxSwift (~> 15.0.0)
+    - RxSwift (~> 6.1)
   - iHolidaysData/Tests (0.1.0):
     - iHolidaysDomain (~> 0.1.0)
-    - Moya/RxSwift (~> 14.0.0)
+    - Moya/RxSwift (~> 15.0.0)
     - Nimble (~> 9.0.0)
     - Quick (~> 3.0.0)
-    - RxBlocking (~> 5.1)
-    - RxSwift (~> 5.1.1)
-    - RxTest (~> 5.1)
+    - RxBlocking
+    - RxSwift (~> 6.1)
+    - RxTest
   - iHolidaysDomain (0.1.0):
-    - RxSwift (~> 5.1.1)
+    - RxSwift (~> 6.1)
   - iHolidaysDomain/Tests (0.1.0):
     - Nimble (~> 9.0.0)
     - Quick (~> 3.0.0)
-    - RxBlocking (~> 5.1)
-    - RxSwift (~> 5.1.1)
-    - RxTest (~> 5.1)
-  - Moya/Core (14.0.0):
+    - RxBlocking
+    - RxSwift (~> 6.1)
+    - RxTest
+  - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
-  - Moya/RxSwift (14.0.0):
+  - Moya/RxSwift (15.0.0):
     - Moya/Core
-    - RxSwift (~> 5.0)
-  - Nimble (9.0.0)
-  - Quick (3.0.0)
-  - R.swift (5.3.1):
+    - RxSwift (~> 6.0)
+  - Nimble (9.0.1)
+  - Quick (3.0.1)
+  - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
-  - RxBlocking (5.1.1):
-    - RxSwift (~> 5)
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.1)
-  - RxTest (5.1.1):
-    - RxSwift (~> 5)
-  - SDWebImage (5.10.4):
-    - SDWebImage/Core (= 5.10.4)
-  - SDWebImage/Core (5.10.4)
-  - SwiftLint (0.42.0)
-  - Swinject (2.7.1)
-  - XCoordinator/Core (2.0.7)
-  - XCoordinator/RxSwift (2.0.7):
-    - RxSwift (~> 5.0)
+  - RxBlocking (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxTest (6.5.0):
+    - RxSwift (= 6.5.0)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
+  - SwiftLint (0.47.0)
+  - Swinject (2.8.1)
+  - XCoordinator/Core (2.2.0)
+  - XCoordinator/RxSwift (2.2.0):
+    - RxSwift (~> 6.1)
     - XCoordinator/Core
 
 DEPENDENCIES:
@@ -55,14 +55,14 @@ DEPENDENCIES:
   - iHolidaysData/Tests (from `./Packages/iHolidaysData`)
   - iHolidaysDomain (from `./Packages/iHolidaysDomain`)
   - iHolidaysDomain/Tests (from `./Packages/iHolidaysDomain`)
-  - Moya/RxSwift (~> 14.0.0)
-  - R.swift (~> 5.3.1)
-  - RxCocoa (~> 5.1.1)
-  - RxSwift (~> 5.1.1)
-  - SDWebImage (~> 5.10.4)
-  - SwiftLint (~> 0.42.0)
-  - Swinject (~> 2.7.1)
-  - XCoordinator/RxSwift (~> 2.0.7)
+  - Moya/RxSwift (~> 15.0)
+  - R.swift (~> 6.1.0)
+  - RxCocoa
+  - RxSwift (~> 6.1)
+  - SDWebImage (~> 5.12)
+  - SwiftLint (~> 0.47.0)
+  - Swinject (~> 2.8)
+  - XCoordinator/RxSwift (~> 2.2)
 
 SPEC REPOS:
   trunk:
@@ -89,24 +89,24 @@ EXTERNAL SOURCES:
     :path: "./Packages/iHolidaysDomain"
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  iHolidaysData: ad4e7c78e4325aaa4c98baf450a92853fbd13963
-  iHolidaysDomain: 33dca24a7c1b021d1a92068a618faadc16b62ac3
-  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
-  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
-  R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  iHolidaysData: 8d77ad9558b5dc81d81d6f98a64c903ea730972a
+  iHolidaysDomain: 050cf512b9b6434520fab999ddf2b95bfdb3d528
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  Nimble: 7bed62ffabd6dbfe05f5925cbc43722533248990
+  Quick: 947834f0d0f43fc933d0e9dd00086a76e783e4fb
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
-  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
-  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
-  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
-  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
-  XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
+  RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SwiftLint: d41cc46a2ae58ac6d9f26954bc89f1d72e71fdef
+  Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
+  XCoordinator: a5f91e43ee944f508529763921165697d3211629
 
-PODFILE CHECKSUM: 672d11d48ac9e80854d4ced57ef2c5bd5facca25
+PODFILE CHECKSUM: 143a4883d62d94cce6eb59599c1c6937b39709e1
 
 COCOAPODS: 1.11.3

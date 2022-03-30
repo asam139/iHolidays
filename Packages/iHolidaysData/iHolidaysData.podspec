@@ -38,15 +38,15 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.dependency 'iHolidaysDomain', '~> 0.1.0'
-  s.dependency 'RxSwift', '~> 5.1.1'
-  s.dependency 'Moya/RxSwift', '~> 14.0.0'
+  s.dependency 'RxSwift', '~> 6.1'
+  s.dependency 'Moya/RxSwift', '~> 15.0.0'
 
   s.test_spec 'Tests' do |test_spec|
     test_spec.source_files = 'Tests/iHolidaysDataTests/**/*.{h,m,swift}'
     test_spec.dependency 'Quick', '~> 3.0.0'
     test_spec.dependency 'Nimble', '~> 9.0.0'
-    test_spec.dependency 'RxTest', '~> 5.1'
-    test_spec.dependency 'RxBlocking', '~> 5.1'
+    test_spec.dependency 'RxTest'
+    test_spec.dependency 'RxBlocking'
 
     test_spec.script_phases = [
       { :name => 'Sourcery',

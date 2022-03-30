@@ -23,22 +23,22 @@ target 'iHolidays' do
   pod 'iHolidaysData', :path => './Packages/iHolidaysData', :testspecs => ['Tests']
   
   # DI
-  pod 'Swinject', '~> 2.7.1'
+  pod 'Swinject', '~> 2.8'
   
   # Base
-  pod 'RxSwift', '~> 5.1.1'
-  pod 'RxCocoa', '~> 5.1.1'
+  pod 'RxSwift', '~> 6.1'
+  pod 'RxCocoa'
   
   # Networking
-  pod 'Moya/RxSwift', '~> 14.0.0'
+  pod 'Moya/RxSwift', '~> 15.0'
 
   # UI
-  pod 'XCoordinator/RxSwift', '~> 2.0.7'
-  pod 'SDWebImage', '~> 5.10.4'
+  pod 'XCoordinator/RxSwift', '~> 2.2'
+  pod 'SDWebImage', '~> 5.12'
   
   # Tools
-  pod 'R.swift', '~> 5.3.1'
-  pod 'SwiftLint', '~> 0.42.0'
+  pod 'R.swift', '~> 6.1.0'
+  pod 'SwiftLint', '~> 0.47.0'
   
   # Scripts
   addScriptForLint

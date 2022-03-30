@@ -5,8 +5,8 @@
 //  Created by Saúl Moreno Abril on 24/1/21.
 //
 
-import Foundation
 import iHolidaysDomain
+import RxDataSources
 import RxSwift
 
 struct HolidaysViewModelInput {
@@ -14,7 +14,12 @@ struct HolidaysViewModelInput {
     var selectHoliday: AnyObserver<Holiday>
 }
 
-typealias HolidayWithImage = (holiday: Holiday, imageURL: URL)
+struct HolidayWithImage: Equatable, IdentifiableType {
+    let holiday: Holiday
+    let imageURL: URL
+
+    var identity: String { holiday.id }
+}
 
 struct HolidaysViewModelOutput {
     let holidays: Observable<[HolidayWithImage]>

@@ -12,7 +12,7 @@ import Swinject
 import XCoordinator
 
 class HolidaysViewModel: ViewModelType {
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 
     // MARK: Inputs
     private lazy var fetchHolidays = PublishSubject<Void>()

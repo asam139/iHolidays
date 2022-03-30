@@ -34,6 +34,7 @@ target 'iHolidays' do
   # UI
   pod 'XCoordinator/RxSwift', '~> 2.2'
   pod 'SDWebImage', '~> 5.12'
+  pod 'RxDataSources', '~> 5.0'
   
   # Tools
   pod 'R.swift', '~> 6.1.0'

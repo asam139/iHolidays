@@ -6,6 +6,7 @@
 //
 
 import iHolidaysDomain
+import RxDataSources
 import RxSwift
 import SDWebImage
 import UIKit
@@ -17,12 +18,12 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
     }()
 
     // MARK: Stored properties
-    private let tableViewCellIdentifier = String(describing: HolidayTableViewCell.self)
+    private static let tableViewCellIdentifier = String(describing: HolidayTableViewCell.self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(HolidayTableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
+        tableView.register(HolidayTableViewCell.self, forCellReuseIdentifier: Self.tableViewCellIdentifier)
         tableView.rowHeight = 44
     }
 
@@ -51,18 +52,49 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
             .drive(viewModel.input.selectHoliday)
             .disposed(by: disposeBag)
 
-        viewModel.output.holidays
-            .asDriver(onErrorJustReturn: [])
-            .drive(tableView.rx.items(cellIdentifier: tableViewCellIdentifier)) { _, model, cell in
-                guard let cell = cell as? HolidayTableViewCell else {
-                    return
-                }
-                cell.update(model: .init(imageURL: model.imageURL, name: model.holiday.name))
+        // let dataSource = RxTableViewSectionedReloadDataSource<Section>(co
+
+        let dataSource = RxTableViewSectionedReloadDataSource<Section> {
+            _, tableView, indexPath, item  in
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: Self.tableViewCellIdentifier,
+                for: indexPath
+            ) as? HolidayTableViewCell else {
+                return UITableViewCell()
             }
+            cell.update(model: .init(imageURL: item.imageURL, name: item.holiday.name))
+            return cell
+        }
+        
+
+        viewModel.output.holidays
+            .map { [Section(header: "", items: $0)] }
+            .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }
 
     private func fetch() {
         viewModel.input.fetchHolidaysTrigger.onNext(())
+    }
+}
+
+extension HolidaysViewController {
+    struct Section: AnimatableSectionModelType {
+        let header: String
+        let items: [HolidayWithImage]
+
+        init(header: String, items: [HolidayWithImage]) {
+            self.header = header
+            self.items = items
+        }
+
+        init(original: Section, items: [HolidayWithImage]) {
+            self.header = original.header
+            self.items = items
+        }
+
+        var identity: String {
+            return header
+        }
     }
 }

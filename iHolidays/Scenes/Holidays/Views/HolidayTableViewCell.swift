@@ -45,7 +45,9 @@ class HolidayTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         backgroundColor = .clear
+        randomImageView.sd_cancelCurrentImageLoad()
         randomImageView.image = nil
+
         nameLabel.text = ""
     }
 
@@ -82,7 +84,11 @@ class HolidayTableViewCell: UITableViewCell {
     }
 
     func update(model: Model) {
-        randomImageView.sd_setImage(with: model.imageURL, placeholderImage: UIImage(systemName: "photo"))
+        randomImageView.sd_setImage(
+            with: model.imageURL,
+            placeholderImage: UIImage(systemName: "photo"),
+            options: [.delayPlaceholder, .queryMemoryData]
+        )
         nameLabel.text = model.name
     }
 }

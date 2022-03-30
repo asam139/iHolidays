@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.5.0)
+  - Differentiator (5.0.0)
   - iHolidaysData (0.1.0):
     - iHolidaysDomain (~> 0.1.0)
     - Moya/RxSwift (~> 15.0.0)
@@ -35,6 +36,10 @@ PODS:
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
@@ -58,6 +63,7 @@ DEPENDENCIES:
   - Moya/RxSwift (~> 15.0)
   - R.swift (~> 6.1.0)
   - RxCocoa
+  - RxDataSources (~> 5.0)
   - RxSwift (~> 6.1)
   - SDWebImage (~> 5.12)
   - SwiftLint (~> 0.47.0)
@@ -67,6 +73,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Differentiator
     - Moya
     - Nimble
     - Quick
@@ -74,6 +81,7 @@ SPEC REPOS:
     - R.swift.Library
     - RxBlocking
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - RxTest
@@ -90,6 +98,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   iHolidaysData: 8d77ad9558b5dc81d81d6f98a64c903ea730972a
   iHolidaysDomain: 050cf512b9b6434520fab999ddf2b95bfdb3d528
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
@@ -99,6 +108,7 @@ SPEC CHECKSUMS:
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
@@ -107,6 +117,6 @@ SPEC CHECKSUMS:
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
   XCoordinator: a5f91e43ee944f508529763921165697d3211629
 
-PODFILE CHECKSUM: 802540e62a1c94fe48c199cdff209997ab8f8aff
+PODFILE CHECKSUM: 63e7ab634586c013ea89964f27b897c5a17b61ce
 
 COCOAPODS: 1.11.3

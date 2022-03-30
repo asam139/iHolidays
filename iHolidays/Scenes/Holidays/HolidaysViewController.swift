@@ -50,8 +50,7 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
                 guard let cell = cell as? HolidayTableViewCell else {
                     return
                 }
-                cell.randomImageView.sd_setImage(with: model.imageURL, placeholderImage: nil, options: [.refreshCached])
-                cell.nameLabel.text = model.holiday.name
+                cell.update(model: .init(imageURL: model.imageURL, name: model.holiday.name))
             }
             .disposed(by: disposeBag)
     }

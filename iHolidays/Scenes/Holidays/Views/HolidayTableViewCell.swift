@@ -8,6 +8,30 @@
 import UIKit
 
 class HolidayTableViewCell: UITableViewCell {
+    struct Model {
+        let imageURL: URL?
+        let name: String?
+    }
+
+    // MARK: Stored properties
+    private let randomImageView: UIImageView = {
+        let img = UIImageView()
+        img.contentMode = .scaleAspectFill
+        img.layer.cornerRadius = 5
+        img.clipsToBounds = true
+        img.tintColor = .secondaryLabel
+        img.translatesAutoresizingMaskIntoConstraints = false
+        return img
+    }()
+
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        label.textColor = .label
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     // MARK: Initialization
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -20,33 +44,24 @@ class HolidayTableViewCell: UITableViewCell {
         setUp()
     }
 
-    // MARK: Overrides
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        backgroundColor = .clear
+        randomImageView.image = nil
+        nameLabel.text = ""
+    }
 
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         super.setHighlighted(highlighted, animated: animated)
 
-        UIView.animate(withDuration: animated ? 0.35 : 0) {
-            self.backgroundColor = highlighted ? .lightGray : .white
+        if animated {
+            UIView.animate(withDuration: animated ? 0.3 : 0) {
+                self.backgroundColor = highlighted ? .systemBlue : .clear
+            }
+        } else {
+            backgroundColor = highlighted ? .systemBlue : .clear
         }
     }
-
-    // MARK: Subviews
-    let randomImageView: UIImageView = {
-        let img = UIImageView()
-        img.contentMode = .scaleAspectFill
-        img.layer.cornerRadius = 5
-        img.clipsToBounds = true
-        img.translatesAutoresizingMaskIntoConstraints = false
-        return img
-    }()
-
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
-        label.textColor = UIColor.black
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
 
     private func setUp() {
         contentView.addSubview(randomImageView)
@@ -61,5 +76,10 @@ class HolidayTableViewCell: UITableViewCell {
         nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
         nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+    }
+
+    func update(model: Model) {
+        randomImageView.sd_setImage(with: model.imageURL, placeholderImage: UIImage(systemName: "photo"))
+        nameLabel.text = model.name
     }
 }

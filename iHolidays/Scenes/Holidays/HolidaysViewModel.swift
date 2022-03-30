@@ -18,22 +18,22 @@ class HolidaysViewModel: ViewModelType {
     private lazy var fetchHolidays = PublishSubject<Void>()
     private lazy var selectHoliday = PublishSubject<Holiday>()
 
-    lazy var input: HolidaysViewModelInput = {
-        HolidaysViewModelInput(
+    lazy var input: Input = {
+        Input(
             fetchHolidaysTrigger: fetchHolidays.asObserver(),
             selectHoliday: selectHoliday.asObserver()
         )
     }()
 
     // MARK: Outputs
-    private lazy var holidaysSub = PublishSubject<[HolidayWithImage]>()
+    private lazy var sectionsSub = PublishSubject<[Section]>()
 
-    lazy var output: HolidaysViewModelOutput = {
+    lazy var output: Output = {
         transformInput()
     }()
 
     // MARK: Transform
-    func transformInput() -> HolidaysViewModelOutput {
+    func transformInput() -> Output {
         fetchHolidays
             .flatMap { [fetchHolidaysUseCase] in fetchHolidaysUseCase.getHolidays(country: "ES", year: 2020) }
             .flatMap { [fetchPicsumUseCase] array -> Single<[HolidayWithImage]> in
@@ -45,14 +45,15 @@ class HolidaysViewModel: ViewModelType {
                 }
                 return Observable.from(array).merge().toArray()
             }
-            .bind(to: holidaysSub)
+            .map { [Section(header: "", items: $0)] }
+            .bind(to: sectionsSub)
             .disposed(by: disposeBag)
 
         selectHoliday
             .flatMap { [router] in router.rx.trigger(.holiday($0)) }
             .subscribe().disposed(by: disposeBag)
 
-        return HolidaysViewModelOutput(holidays: holidaysSub.asObservable())
+        return Output(sections: sectionsSub.asObservable())
     }
 
     // MARK: Stored properties

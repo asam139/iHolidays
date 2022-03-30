@@ -6,9 +6,9 @@
 //
 
 protocol ViewModelType {
-    associatedtype Input
-    associatedtype Output
+    associatedtype In
+    associatedtype Out
 
-    var input: Input { get }
-    var output: Output { get }
+    var input: In { get }
+    var output: Out { get }
 }

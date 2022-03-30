@@ -23,10 +23,6 @@ class HolidayViewController: BindableViewController<HolidayViewModel> {
         super.viewWillAppear(animated)
     }
 
-    deinit {
-        print("Deinit \(self)")
-    }
-
     // MARK: BindableType
 
     override func bindViewModel() {

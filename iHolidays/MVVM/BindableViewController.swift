@@ -23,6 +23,12 @@ class BindableViewController<ViewModel>: UIViewController, BindableType {
         fatalError("init(coder:) has not been implemented")
     }
 
+    deinit {
+        #if DEBUG
+        print("Deinit \(self)")
+        #endif
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()

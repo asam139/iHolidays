@@ -9,18 +9,41 @@ import iHolidaysDomain
 import RxDataSources
 import RxSwift
 
-struct HolidaysViewModelInput {
-    var fetchHolidaysTrigger: AnyObserver<Void>
-    var selectHoliday: AnyObserver<Holiday>
+extension HolidaysViewModel {
+    struct Input {
+        let fetchHolidaysTrigger: AnyObserver<Void>
+        let selectHoliday: AnyObserver<Holiday>
+    }
 }
 
-struct HolidayWithImage: Equatable, IdentifiableType {
-    let holiday: Holiday
-    let imageURL: URL
+extension HolidaysViewModel {
+    struct HolidayWithImage: Equatable, IdentifiableType {
+        let holiday: Holiday
+        let imageURL: URL
 
-    var identity: String { holiday.id }
-}
+        var identity: String { holiday.id }
+    }
 
-struct HolidaysViewModelOutput {
-    let holidays: Observable<[HolidayWithImage]>
+    struct Section: AnimatableSectionModelType {
+        let header: String
+        let items: [HolidayWithImage]
+
+        init(header: String, items: [HolidayWithImage]) {
+            self.header = header
+            self.items = items
+        }
+
+        init(original: Section, items: [HolidayWithImage]) {
+            self.header = original.header
+            self.items = items
+        }
+
+        var identity: String {
+            return header
+        }
+    }
+
+    struct Output {
+        let sections: Observable<[Section]>
+    }
 }

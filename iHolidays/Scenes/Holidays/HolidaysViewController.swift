@@ -32,10 +32,6 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
         fetch()
     }
 
-    deinit {
-        print("Deinit \(self)")
-    }
-
     // MARK: BindableType
 
     override func setUp() {
@@ -46,15 +42,13 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
     override func bindViewModel() {
         super.bindViewModel()
 
-        tableView.rx.modelSelected(HolidayWithImage.self)
+        tableView.rx.modelSelected(HolidaysViewModel.HolidayWithImage.self)
             .asDriver()
             .map { $0.holiday }
             .drive(viewModel.input.selectHoliday)
             .disposed(by: disposeBag)
 
-        // let dataSource = RxTableViewSectionedReloadDataSource<Section>(co
-
-        let dataSource = RxTableViewSectionedReloadDataSource<Section> {
+        let dataSource = RxTableViewSectionedReloadDataSource<HolidaysViewModel.Section> {
             _, tableView, indexPath, item  in
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: Self.tableViewCellIdentifier,
@@ -65,36 +59,13 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
             cell.update(model: .init(imageURL: item.imageURL, name: item.holiday.name))
             return cell
         }
-        
 
-        viewModel.output.holidays
-            .map { [Section(header: "", items: $0)] }
+        viewModel.output.sections
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }
 
     private func fetch() {
         viewModel.input.fetchHolidaysTrigger.onNext(())
-    }
-}
-
-extension HolidaysViewController {
-    struct Section: AnimatableSectionModelType {
-        let header: String
-        let items: [HolidayWithImage]
-
-        init(header: String, items: [HolidayWithImage]) {
-            self.header = header
-            self.items = items
-        }
-
-        init(original: Section, items: [HolidayWithImage]) {
-            self.header = original.header
-            self.items = items
-        }
-
-        var identity: String {
-            return header
-        }
     }
 }

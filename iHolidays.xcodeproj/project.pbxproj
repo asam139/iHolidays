@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -600,15 +600,13 @@
 		};
 		A2AD07BBB14350775E521A57 /* [CP-User] R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
-			);
 			name = "[CP-User] R.swift";
 			outputPaths = (
-				$SRCROOT/iHolidays/R/R.generated.swift,
+				"$SRCROOT/iHolidays/R/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

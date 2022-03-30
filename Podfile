@@ -9,9 +9,8 @@ end
 
 def addScritForRSwift
   script = '"$PODS_ROOT/R.swift/rswift" generate "$SRCROOT/iHolidays/R/R.generated.swift"'
-  input_files = ['$TEMP_DIR/rswift-lastrun']
   output_files = ['$SRCROOT/iHolidays/R/R.generated.swift']
-  script_phase :name => 'R.swift', :script => script, :input_files => input_files, :output_files => output_files, :execution_position => :before_compile
+  script_phase :name => 'R.swift', :script => script, :output_files => output_files, :execution_position => :before_compile
 end
 
 target 'iHolidays' do

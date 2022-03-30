@@ -25,8 +25,6 @@ class HolidayCoordinator: NavigationCoordinator<HolidayRoute> {
         trigger(.home(holiday))
     }
 
-    // MARK: Overrides
-
     override func prepareTransition(for route: HolidayRoute) -> NavigationTransition {
         switch route {
         case let .home(holiday):

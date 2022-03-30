@@ -15,7 +15,6 @@ enum HomeRoute: Route {
 
 class HomeTabCoordinator: TabBarCoordinator<HomeRoute> {
     // MARK: Stored properties
-
     private let holidaysRouter: StrongRouter<HolidaysRoute>
 
     // MARK: Initialization
@@ -32,8 +31,6 @@ class HomeTabCoordinator: TabBarCoordinator<HomeRoute> {
 
         super.init(tabs: [holidaysRouter], select: holidaysRouter)
     }
-
-    // MARK: Overrides
 
     override func prepareTransition(for route: HomeRoute) -> TabBarTransition {
         switch route {

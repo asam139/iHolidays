@@ -14,10 +14,6 @@ class HolidayViewController: BindableViewController<HolidayViewModel> {
     @IBOutlet private var label: UILabel!
     @IBOutlet private var button: UIButton!
 
-    // MARK: Stored properties
-
-    // MARK: Overrides
-
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()

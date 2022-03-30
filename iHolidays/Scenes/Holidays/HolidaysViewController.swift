@@ -15,10 +15,7 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
     @IBOutlet private var tableView: UITableView!
 
     // MARK: Stored properties
-
     private let tableViewCellIdentifier = String(describing: HolidayTableViewCell.self)
-
-    // MARK: Overrides
 
     override func viewDidLoad() {
         super.viewDidLoad()

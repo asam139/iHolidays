@@ -43,10 +43,11 @@ TODO: Add long description of the pod here.
 
   s.test_spec 'Tests' do |test_spec|
     test_spec.source_files = 'Tests/iHolidaysDataTests/**/*.{h,m,swift}'
-    test_spec.dependency 'Quick', '~> 3.0.0'
-    test_spec.dependency 'Nimble', '~> 9.0.0'
+    test_spec.dependency 'Quick', '~> 4.0'
+    test_spec.dependency 'Nimble', '~> 9.2'
     test_spec.dependency 'RxTest'
     test_spec.dependency 'RxBlocking'
+    test_spec.dependency 'Sourcery', '~> 1.8'
 
     test_spec.script_phases = [
       { :name => 'Sourcery',

@@ -669,7 +669,7 @@
 			);
 			name = "[CP-User] R.swift";
 			outputPaths = (
-				$SRCROOT/iHolidays/R/R.generated.swift,
+				"$SRCROOT/iHolidays/R/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

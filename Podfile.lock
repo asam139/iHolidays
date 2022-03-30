@@ -8,26 +8,28 @@ PODS:
   - iHolidaysData/Tests (0.1.0):
     - iHolidaysDomain (~> 0.1.0)
     - Moya/RxSwift (~> 15.0.0)
-    - Nimble (~> 9.0.0)
-    - Quick (~> 3.0.0)
+    - Nimble (~> 9.2)
+    - Quick (~> 4.0)
     - RxBlocking
     - RxSwift (~> 6.1)
     - RxTest
+    - Sourcery (~> 1.8)
   - iHolidaysDomain (0.1.0):
     - RxSwift (~> 6.1)
   - iHolidaysDomain/Tests (0.1.0):
-    - Nimble (~> 9.0.0)
-    - Quick (~> 3.0.0)
+    - Nimble (~> 9.2)
+    - Quick (~> 4.0)
     - RxBlocking
     - RxSwift (~> 6.1)
     - RxTest
+    - Sourcery (~> 1.8)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (15.0.0):
     - Moya/Core
     - RxSwift (~> 6.0)
-  - Nimble (9.0.1)
-  - Quick (3.0.1)
+  - Nimble (9.2.1)
+  - Quick (4.0.0)
   - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
@@ -48,6 +50,9 @@ PODS:
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
+  - Sourcery (1.8.0):
+    - Sourcery/CLI-Only (= 1.8.0)
+  - Sourcery/CLI-Only (1.8.0)
   - SwiftLint (0.47.0)
   - Swinject (2.8.1)
   - XCoordinator/Core (2.2.0)
@@ -86,6 +91,7 @@ SPEC REPOS:
     - RxSwift
     - RxTest
     - SDWebImage
+    - Sourcery
     - SwiftLint
     - Swinject
     - XCoordinator
@@ -99,11 +105,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
-  iHolidaysData: 8d77ad9558b5dc81d81d6f98a64c903ea730972a
-  iHolidaysDomain: 050cf512b9b6434520fab999ddf2b95bfdb3d528
+  iHolidaysData: b97a0b696e61e1dc7329a3ca5f96611aa3b74861
+  iHolidaysDomain: 733e0c23e3ecbb3340667770ceb81df48bc56770
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
-  Nimble: 7bed62ffabd6dbfe05f5925cbc43722533248990
-  Quick: 947834f0d0f43fc933d0e9dd00086a76e783e4fb
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
@@ -113,6 +119,7 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  Sourcery: 6f5fe49b82b7e02e8c65560cbd52e1be67a1af2e
   SwiftLint: d41cc46a2ae58ac6d9f26954bc89f1d72e71fdef
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
   XCoordinator: a5f91e43ee944f508529763921165697d3211629

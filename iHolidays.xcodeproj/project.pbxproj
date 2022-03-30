@@ -112,6 +112,7 @@
 		86ED9B6325BF3CD0001DE8B0 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
 		86ED9B6C25BF3D32001DE8B0 /* UseCasesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesAssembly.swift; sourceTree = "<group>"; };
 		88A6043821AD7C19C6EFEF34 /* Pods_iHolidays_iHolidaysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iHolidays_iHolidaysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C01997627F46E50009EDD75 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9C371F8C25EFB662006997C8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		CBBA7A40758EC1325A6C678B /* Pods-iHolidays.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays.release.xcconfig"; path = "Target Support Files/Pods-iHolidays/Pods-iHolidays.release.xcconfig"; sourceTree = "<group>"; };
 		F80D403E85EE11B46F55BFA7 /* Pods-iHolidays.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays.debug.xcconfig"; path = "Target Support Files/Pods-iHolidays/Pods-iHolidays.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +191,7 @@
 		86CFD12A25BDFD51006A53E6 = {
 			isa = PBXGroup;
 			children = (
+				9C01997627F46E50009EDD75 /* README.md */,
 				86CFD13525BDFD51006A53E6 /* iHolidays */,
 				86CFD14C25BDFD55006A53E6 /* iHolidaysTests */,
 				86CFD15725BDFD55006A53E6 /* iHolidaysUITests */,
@@ -382,8 +384,6 @@
 			dependencies = (
 			);
 			name = iHolidays;
-			packageProductDependencies = (
-			);
 			productName = iHolidays;
 			productReference = 86CFD13325BDFD51006A53E6 /* iHolidays.app */;
 			productType = "com.apple.product-type.application";
@@ -458,8 +458,6 @@
 				Base,
 			);
 			mainGroup = 86CFD12A25BDFD51006A53E6;
-			packageReferences = (
-			);
 			productRefGroup = 86CFD13425BDFD51006A53E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -614,7 +612,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/iHolidays/R/R.generated.swift\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/iHolidays/R/R.generated.swift\"";
 		};
 		C7D8940B8E9F8D780C46A226 /* [CP-User] Lint */ = {
 			isa = PBXShellScriptBuildPhase;

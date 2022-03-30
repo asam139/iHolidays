@@ -34,12 +34,11 @@ class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
             let viewController = HolidaysViewController(nib: R.nib.holidaysViewController)
             let viewModel = resolver.resolve(HolidaysViewModel.self, argument: unownedRouter)!
             viewController.bind(to: viewModel)
-            return .push(viewController, animation: .navigation)
+            return .push(viewController, animation: .pushWithCurveEaseOut)
         case .holiday(let holiday):
             let coordinator = HolidayCoordinator(rootViewController: rootViewController, holiday: holiday, resolver: resolver)
             addChild(coordinator)
-            return .none()
-        // return .present(coordinator, animation: .default)
+            return .none() // .present(coordinator, animation: .pushWithCurveEaseOut)
         }
     }
 

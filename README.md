@@ -79,7 +79,7 @@ Conversely the downsides are mainly two:
 
 Finally, to sum, reactive programming help you to write better, **cleaner code** and create components that can be **reused** in a **robust** codebase that can evolve. So the  disadvantages are justified. 
 
-### Moya
+### Swinject
 
 Swinject is framework to manage the DI (Dependency Injection) so the best way to justify it it is explaining the reason to use DI.
 
@@ -109,7 +109,7 @@ Also definitely it is well maintained and quite small (only a few classes and pr
 
 XCoordinator is a framework to simplify the implementation of the Coordiantor pattern.
 
-As always the advantages of the coordinator patthern are:
+As always the advantages of the coordinator pattern are:
 
 * **Separation of responsibilities** with the coordinator being the only component knowing anything related to the flow of your application.
 * **Reusable Views and ViewModels** because they do not contain any navigation logic.

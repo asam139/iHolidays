@@ -10,8 +10,10 @@ import UIKit
 import XCoordinator
 
 extension Animation {
-    static let navigation = Animation(presentation: InteractiveTransitionAnimation.push,
-                                      dismissal: InteractiveTransitionAnimation.pop)
+    static let pushWithCurveEaseOut = Animation(
+        presentation: InteractiveTransitionAnimation.push,
+        dismissal: InteractiveTransitionAnimation.pop
+    )
 }
 
 extension InteractiveTransitionAnimation {

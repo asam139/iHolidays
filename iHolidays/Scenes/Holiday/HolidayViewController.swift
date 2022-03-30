@@ -10,9 +10,19 @@ import RxSwift
 import UIKit
 
 class HolidayViewController: BindableViewController<HolidayViewModel> {
-    // MARK: Views
-    @IBOutlet private var label: UILabel!
-    @IBOutlet private var button: UIButton!
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
+        label.textColor = .label
+        return label
+    }()
+
+    private var okButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .body)
+        button.setTitle("Done", for: .normal)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +33,25 @@ class HolidayViewController: BindableViewController<HolidayViewModel> {
         super.viewWillAppear(animated)
     }
 
-    // MARK: BindableType
+    override func setUp() {
+        super.setUp()
+        view.addSubviews(nameLabel, okButton)
+
+        nameLabel.center()
+        okButton.alignX()
+        okButton.anchor(
+            top: nameLabel.bottomAnchor,
+            padding: .init(bottom: 24)
+        )
+    }
 
     override func bindViewModel() {
-        button.rx.tap.subscribe(onNext: { [viewModel] in
-            viewModel?.input.dismissTrigger.onNext(())
-        }).disposed(by: disposeBag)
         viewModel.output.holiday.map { $0.name }
             .asDriver(onErrorJustReturn: "")
-            .drive(label.rx.text).disposed(by: disposeBag)
+            .drive(nameLabel.rx.text).disposed(by: disposeBag)
+
+        okButton.rx.tap.subscribe(onNext: { [viewModel] in
+            viewModel?.input.dismissTrigger.onNext(())
+        }).disposed(by: disposeBag)
     }
 }

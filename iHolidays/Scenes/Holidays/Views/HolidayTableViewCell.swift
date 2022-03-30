@@ -25,7 +25,7 @@ class HolidayTableViewCell: UITableViewCell {
 
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         label.textColor = .label
         return label
     }()

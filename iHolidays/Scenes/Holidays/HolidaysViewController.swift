@@ -12,12 +12,10 @@ import SDWebImage
 import UIKit
 
 class HolidaysViewController: BindableViewController<HolidaysViewModel> {
-    // MARK: Stored properties
     private let tableView: UITableView = {
         UITableView()
     }()
 
-    // MARK: Stored properties
     private static let tableViewCellIdentifier = String(describing: HolidayTableViewCell.self)
 
     override func viewDidLoad() {
@@ -31,8 +29,6 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
         super.viewWillAppear(animated)
         fetch()
     }
-
-    // MARK: BindableType
 
     override func setUp() {
         super.setUp()

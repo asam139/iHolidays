@@ -30,7 +30,7 @@ class HolidayViewModel: ViewModelType {
     }()
 
     // MARK: Transform
-    func transformInput() -> HolidayViewModelOutput {
+    private func transformInput() -> HolidayViewModelOutput {
         dismissTrigger
             .flatMap { [router] in router.rx.trigger(.holidays) }
             .subscribe()

@@ -33,17 +33,17 @@ class HolidaysViewModel: ViewModelType {
     }()
 
     // MARK: Transform
-    func transformInput() -> Output {
+    private func transformInput() -> Output {
         fetchHolidays
             .flatMap { [fetchHolidaysUseCase] in fetchHolidaysUseCase.getHolidays(country: "ES", year: 2020) }
-            .flatMap { [fetchPicsumUseCase] array -> Single<[HolidayWithImage]> in
-                let array = array.map {
+            .flatMap { [fetchPicsumUseCase] holidays -> Single<[HolidayWithImage]> in
+                let holidaysWithImages = holidays.map {
                     Observable.combineLatest(
                         Observable.just($0),
                         fetchPicsumUseCase.getRandomImage().asObservable()
                     ).map { HolidayWithImage(holiday: $0.0, imageURL: $0.1) }
                 }
-                return Observable.from(array).merge().toArray()
+                return Observable.from(holidaysWithImages).merge().toArray()
             }
             .map { [Section(header: "", items: $0)] }
             .bind(to: sectionsSub)

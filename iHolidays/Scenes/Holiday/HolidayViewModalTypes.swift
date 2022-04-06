@@ -9,7 +9,7 @@ import iHolidaysDomain
 import RxSwift
 
 struct HolidayViewModelInput {
-    var dismissTrigger: AnyObserver<Void>
+    let dismissTrigger: AnyObserver<Void>
 }
 
 struct HolidayViewModelOutput {

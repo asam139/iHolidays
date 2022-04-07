@@ -14,10 +14,7 @@ extension Assembler {
             CommonAssembly(),
             ServicesAssembly(),
             RepositoriesAssembly(),
-            UseCasesAssembly(),
-
-            HolidaysViewModelAssembly(),
-            HolidayViewModelAssembly()
+            UseCasesAssembly()
         ], container: container)
         return assembler
     }()

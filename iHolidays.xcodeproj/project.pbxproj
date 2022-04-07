@@ -13,8 +13,6 @@
 		86305DD025C017C90091521B /* BindableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86305DCF25C017C90091521B /* BindableViewController.swift */; };
 		86305DD525C019BF0091521B /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86305DD425C019BF0091521B /* ViewModelType.swift */; };
 		868333BB25BED05200F26976 /* Transitions+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868333BA25BED05200F26976 /* Transitions+.swift */; };
-		86A696B125BF52A80067C25B /* HolidaysViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A696B025BF52A80067C25B /* HolidaysViewModelAssembly.swift */; };
-		86A696B625BF549B0067C25B /* HolidayViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A696B525BF549B0067C25B /* HolidayViewModelAssembly.swift */; };
 		86AFC5D125CF17DE0074437E /* BundleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC5D025CF17DE0074437E /* BundleInfo.swift */; };
 		86AFC5DC25CF1D280074437E /* BundleInfoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFC5DB25CF1D280074437E /* BundleInfoURL.swift */; };
 		86CFD13725BDFD51006A53E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CFD13625BDFD51006A53E6 /* AppDelegate.swift */; };
@@ -77,8 +75,6 @@
 		86305DD425C019BF0091521B /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		863D1BB65A1EFD9A9730C3E6 /* Pods-iHolidays-iHolidaysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHolidays-iHolidaysUITests.release.xcconfig"; path = "Target Support Files/Pods-iHolidays-iHolidaysUITests/Pods-iHolidays-iHolidaysUITests.release.xcconfig"; sourceTree = "<group>"; };
 		868333BA25BED05200F26976 /* Transitions+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transitions+.swift"; sourceTree = "<group>"; };
-		86A696B025BF52A80067C25B /* HolidaysViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysViewModelAssembly.swift; sourceTree = "<group>"; };
-		86A696B525BF549B0067C25B /* HolidayViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewModelAssembly.swift; sourceTree = "<group>"; };
 		86AFC5D025CF17DE0074437E /* BundleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleInfo.swift; sourceTree = "<group>"; };
 		86AFC5DB25CF1D280074437E /* BundleInfoURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleInfoURL.swift; sourceTree = "<group>"; };
 		86CFD13325BDFD51006A53E6 /* iHolidays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHolidays.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,15 +172,6 @@
 				9C6D204827F48F3500F0E3E3 /* UIKit */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		86A696A725BF52350067C25B /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				86A696B025BF52A80067C25B /* HolidaysViewModelAssembly.swift */,
-				86A696B525BF549B0067C25B /* HolidayViewModelAssembly.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		86AFC5CF25CF17780074437E /* PropertyWrappers */ = {
@@ -313,7 +300,6 @@
 			children = (
 				86ED9B5425BF3972001DE8B0 /* Assembler.swift */,
 				86ED9B5225BF38EB001DE8B0 /* Common */,
-				86A696A725BF52350067C25B /* ViewModels */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -669,7 +655,7 @@
 			);
 			name = "[CP-User] R.swift";
 			outputPaths = (
-				"$SRCROOT/iHolidays/R/R.generated.swift",
+				$SRCROOT/iHolidays/R/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -706,7 +692,6 @@
 				86ED9B6D25BF3D32001DE8B0 /* UseCasesAssembly.swift in Sources */,
 				86CFD19425BE0D58006A53E6 /* BindableType.swift in Sources */,
 				86CFD17A25BDFE47006A53E6 /* HolidaysViewModel.swift in Sources */,
-				86A696B625BF549B0067C25B /* HolidayViewModelAssembly.swift in Sources */,
 				9C371F8D25EFB662006997C8 /* R.generated.swift in Sources */,
 				9C6D205627F48F3500F0E3E3 /* UIView+Layout.swift in Sources */,
 				9C6D205527F48F3500F0E3E3 /* UIView+.swift in Sources */,
@@ -723,7 +708,6 @@
 				86AFC5D125CF17DE0074437E /* BundleInfo.swift in Sources */,
 				86ED9B5A25BF3A54001DE8B0 /* CommonAssembly.swift in Sources */,
 				868333BB25BED05200F26976 /* Transitions+.swift in Sources */,
-				86A696B125BF52A80067C25B /* HolidaysViewModelAssembly.swift in Sources */,
 				86305DD025C017C90091521B /* BindableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

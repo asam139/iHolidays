@@ -30,7 +30,7 @@ class HolidaysCoordinator: NavigationCoordinator<HolidaysRoute> {
         switch route {
         case .home:
             let viewController = HolidaysViewController()
-            let viewModel = resolver.resolve(HolidaysViewModel.self, argument: unownedRouter)!
+            let viewModel = HolidaysViewModel(router: unownedRouter, resolver: resolver)
             viewController.bind(to: viewModel)
             return .push(viewController, animation: .pushWithCurveEaseOut)
         case .holiday(let holiday):

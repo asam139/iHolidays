@@ -35,7 +35,7 @@ class HolidaysViewModel: ViewModelType {
     // MARK: Transform
     private func transformInput() -> Output {
         fetchHolidays
-            .flatMap { [fetchHolidaysUseCase] in fetchHolidaysUseCase.getHolidays(country: "ES", year: 2020) }
+            .flatMap { [fetchHolidaysUseCase] in fetchHolidaysUseCase.getHolidays(country: "ES", year: 2021) }
             .flatMap { [fetchPicsumUseCase] holidays -> Single<[HolidayWithImage]> in
                 let holidaysWithImages = holidays.map {
                     Observable.combineLatest(
@@ -53,7 +53,7 @@ class HolidaysViewModel: ViewModelType {
             .flatMap { [router] in router.rx.trigger(.holiday($0)) }
             .subscribe().disposed(by: disposeBag)
 
-        return Output(sections: sectionsSub.asObservable())
+        return Output(sections: sectionsSub.asDriver(onErrorJustReturn: []))
     }
 
     // MARK: Stored properties

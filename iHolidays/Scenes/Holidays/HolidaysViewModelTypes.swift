@@ -6,6 +6,7 @@
 //
 
 import iHolidaysDomain
+import RxCocoa
 import RxDataSources
 import RxSwift
 
@@ -44,6 +45,6 @@ extension HolidaysViewModel {
     }
 
     struct Output {
-        let sections: Observable<[Section]>
+        let sections: Driver<[Section]>
     }
 }

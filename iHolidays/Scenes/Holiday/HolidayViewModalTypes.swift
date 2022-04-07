@@ -6,6 +6,7 @@
 //
 
 import iHolidaysDomain
+import RxCocoa
 import RxSwift
 
 struct HolidayViewModelInput {
@@ -13,5 +14,5 @@ struct HolidayViewModelInput {
 }
 
 struct HolidayViewModelOutput {
-    let holiday: Observable<Holiday>
+    let holiday: Driver<Holiday>
 }

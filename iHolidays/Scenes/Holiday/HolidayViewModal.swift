@@ -7,6 +7,7 @@
 
 import Foundation
 import iHolidaysDomain
+import RxCocoa
 import RxSwift
 import XCoordinator
 
@@ -23,7 +24,7 @@ class HolidayViewModel: ViewModelType {
     }()
 
     // MARK: Outputs
-    private var holiday: Observable<Holiday>
+    private var holiday: BehaviorRelay<Holiday>
 
     lazy var output: HolidayViewModelOutput = {
         transformInput()
@@ -36,7 +37,7 @@ class HolidayViewModel: ViewModelType {
             .subscribe()
             .disposed(by: disposeBag)
 
-        return HolidayViewModelOutput(holiday: holiday)
+        return HolidayViewModelOutput(holiday: holiday.asDriver())
     }
 
     // MARK: Stored properties
@@ -47,7 +48,7 @@ class HolidayViewModel: ViewModelType {
 
     init(holiday: Holiday, router: UnownedRouter<HolidayRoute>) {
         self.router = router
-        self.holiday = .just(holiday)
+        self.holiday = .init(value: holiday)
     }
 
     deinit {

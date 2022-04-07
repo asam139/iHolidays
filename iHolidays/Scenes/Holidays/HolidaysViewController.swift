@@ -57,7 +57,7 @@ class HolidaysViewController: BindableViewController<HolidaysViewModel> {
         }
 
         viewModel.output.sections
-            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }
 
